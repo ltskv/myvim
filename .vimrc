@@ -1,4 +1,5 @@
-"Vundle stuff"
+"Vundle stuff
+"{{{
 set nocompatible
 filetype off
 
@@ -18,19 +19,36 @@ Plugin 'majutsushi/tagbar'
 Plugin 'petRUShka/vim-opencl'
 
 call vundle#end()
+"}}}
 
+"Syntax
+"{{{
 filetype plugin indent on
 syntax enable
 syntax sync maxlines=256
 set synmaxcol=200
+"}}}
 
 "Options
+"{{{
 set expandtab
 set shiftwidth=4
 set tabstop=4
 set foldlevel=99
+set encoding=utf-8
+set number
+set showmatch
+set matchtime=2
+
+set hlsearch
+set incsearch
+
+set laststatus=2
+"set splitbelow
+"}}}
 
 "Gui stuff
+"{{{
 set guifont=Consolas:h12
 set guicursor=n-v-i-c:block-Cursor
 set guioptions-=e
@@ -42,34 +60,32 @@ set guioptions-=m
 set guioptions-=T
 
 set langmenu=en_US.UTF-8
+"}}}
 
-set encoding=utf-8
-set number
-set showmatch
-set matchtime=2
-
-set hlsearch
-set incsearch
-
-set laststatus=2
-"set splitbelow
 "Colors
+"{{{
 colorscheme izi
 "let g:airline_theme='light'
+""}}}
 
 "Tagbar stuff
+"{{{
 let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
 let g:tagbar_autofocus = 1
+"}}}
 
 "YouCompleteMe stuff
+"{{{
 set completeopt-=preview
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_global_ycm_extra_conf = '~/.ycm_global_extra_config.py'
 let g:ycm_python_binary_path = '/usr/local/bin/python3'
 let g:syntastic_python_python_exec = '/usr/local/bin/python3'
 set shortmess+=c
+"}}}
 
 "Mappings
+"{{{
 let mapleader = ","
 let maplocalleader = ","
 nnoremap q <nop>
@@ -96,8 +112,10 @@ vnoremap <c-c> "+y
 onoremap p i(
 onoremap qd i"
 onoremap qs i'
+"}}}
 
 "Mappings for Plugins
+"{{{
 nnoremap <leader>N :NERDTree<cr>
 nnoremap <leader>r :AirlineRefresh<cr>
 nnoremap <leader>] :YcmCompleter GoTo<cr>
@@ -105,6 +123,9 @@ nnoremap <leader>ye :YcmShowDetailedDiagnostic<cr>
 nnoremap <leader>yf :YcmCompleter FixIt<cr>:ccl<cr>
 nnoremap <leader>yd :YcmDiags<cr>
 nnoremap <leader>T :TagbarToggle<cr>
+"}}}
 
 "Abbreviations
+"{{{
 iabbrev rr return
+"}}}
