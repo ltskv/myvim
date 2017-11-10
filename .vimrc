@@ -1,24 +1,10 @@
-"Vundle stuff
+"Plugin stuff
 "{{{
-set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/syntastic'
-Plugin 'vim-scripts/indentpython.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-fugitive'
-Plugin 'majutsushi/tagbar'
-"Plugin 'jmcantrell/vim-virtualenv'
-Plugin 'petRUShka/vim-opencl'
-
-call vundle#end()
+if has("win32")
+    source $HOME/vimfiles/plugins.vim
+else
+    source $HOME/.vim/plugins.vim
+endif
 "}}}
 
 "Syntax
@@ -44,6 +30,7 @@ set hlsearch
 set incsearch
 
 set laststatus=2
+set formatoptions-=cro
 "set splitbelow
 "}}}
 
@@ -70,7 +57,6 @@ colorscheme izi
 
 "Tagbar stuff
 "{{{
-let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
 let g:tagbar_autofocus = 1
 "}}}
 
@@ -78,9 +64,6 @@ let g:tagbar_autofocus = 1
 "{{{
 set completeopt-=preview
 let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_global_ycm_extra_conf = '~/.ycm_global_extra_config.py'
-let g:ycm_python_binary_path = '/usr/local/bin/python3'
-let g:syntastic_python_python_exec = '/usr/local/bin/python3'
 set shortmess+=c
 "}}}
 
