@@ -8,7 +8,7 @@ endif
 
 let colors_name = "izi"
 
-hi Directory    ctermfg=4 ctermbg=15 guifg=#000099 guibg=#ffffff
+hi Directory    ctermfg=4 ctermbg=15 guifg=#0000ff guibg=#ffffff
 "hi ErrorMsg     guibg=#ee2c2c guifg=White
 "hi FoldColumn   guibg=Grey guifg=#00008B
 hi Folded       cterm=bold ctermfg=8 ctermbg=15 gui=bold guifg=#c0c0c0 guibg=#ffffff
@@ -39,10 +39,10 @@ hi Visual       cterm=NONE ctermbg=159 gui=none guibg=#afffff
 hi Error         cterm=bold ctermfg=9 ctermbg=15 gui=bold guifg=#ff0000 guibg=#ffffff
 hi SyntasticError   cterm=bold ctermfg=9 ctermbg=15 gui=bold guifg=#ff0000 guibg=#ffffff
 hi SyntasticWarning cterm=underline gui=undercurl guisp=#ffaf00
-hi Identifier    cterm=NONE ctermfg=6 ctermbg=NONE gui=NONE guifg=#00c0c0 guibg=#ffffff
+hi Identifier    cterm=NONE ctermfg=6 ctermbg=NONE gui=NONE guifg=#00afaf guibg=#ffffff
 "hi Ignore       gui=NONE guifg=bg guibg=NONE
 hi PreProc      cterm=NONE ctermfg=94 ctermbg=15 gui=NONE guifg=#a75f5f guibg=#ffffff
-hi Special      cterm=NONE ctermfg=0 ctermbg=15 gui=NONE guifg=#ff0000 guibg=#ffffff
+hi Special      cterm=NONE ctermfg=0 ctermbg=15 gui=NONE guifg=#000000 guibg=#ffffff
 hi SpecialChar  cterm=NONE ctermfg=9 ctermbg=15 gui=NONE guifg=#ff0000 guibg=#ffffff
 hi String       cterm=NONE ctermfg=1 ctermbg=15 gui=NONE guifg=#c00000 guibg=#ffffff
 hi Underlined   cterm=underline ctermfg=12 ctermbg=15 gui=underline guifg=#0000ff guibg=#ffffff
@@ -64,9 +64,9 @@ hi Type         cterm=NONE ctermfg=24 ctermbg=15 gui=NONE guifg=#005fa7 guibg=#f
 "hi lCursor      guibg=fg guifg=bg
 hi Normal       cterm=NONE ctermfg=0 ctermbg=15 gui=NONE guifg=#000000 guibg=#ffffff
 
-"hi DiffAdd    ctermfg=233 ctermbg=194 guifg=#003300 guibg=#DDFFDD gui=none cterm=none
-"hi DiffChange ctermbg=255  guibg=#ececec gui=none   cterm=none
-"hi DiffText   ctermfg=233  ctermbg=189  guifg=#000033 guibg=#DDDDFF gui=none cterm=none
-"hi DiffDelete ctermfg=252 ctermbg=224   guifg=#DDCCCC guibg=#FFDDDD gui=none    cterm=none
+hi DiffAdd    ctermbg=156 guibg=#c0ffc0 gui=none cterm=none
+hi DiffChange ctermbg=229 guibg=#ffffc0 gui=none cterm=none
+hi DiffText   ctermbg=159 guibg=#afffff gui=none cterm=none
+hi DiffDelete ctermbg=210 ctermfg=1 guibg=#ffc0c0 guifg=#800000 gui=none cterm=none
 
 " vim: sw=2

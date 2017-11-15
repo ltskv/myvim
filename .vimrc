@@ -30,7 +30,6 @@ set hlsearch
 set incsearch
 
 set laststatus=2
-set formatoptions-=cro
 "set splitbelow
 "}}}
 
