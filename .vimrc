@@ -2,8 +2,10 @@
 "{{{
 if has("win32")
     source $HOME/vimfiles/plugins.vim
+    source $HOME/vimfiles/locals.vim
 else
     source $HOME/.vim/plugins.vim
+    source $HOME/.vim/locals.vim
 endif
 "}}}
 
@@ -35,7 +37,6 @@ set laststatus=2
 
 "Gui stuff
 "{{{
-set guifont=Consolas:h12
 set guicursor=n-v-i-c:block-Cursor
 set guicursor+=n-v-i-c:blinkon0
 set guioptions-=e
