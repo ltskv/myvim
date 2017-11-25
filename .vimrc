@@ -53,7 +53,6 @@ set langmenu=en_US.UTF-8
 "Colors
 "{{{
 colorscheme izi
-"let g:airline_theme='light'
 ""}}}
 
 "Tagbar stuff
@@ -70,7 +69,10 @@ set shortmess+=c
 
 "Misc
 "{{{
-match OverLength '\%81v.'
+augroup overlength
+    autocmd!
+    autocmd WinEnter * match OverLength '\%81v.'
+augroup END
 "}}}
 
 "Mappings
@@ -117,4 +119,5 @@ nnoremap <leader>T :TagbarToggle<cr>
 "Abbreviations
 "{{{
 iabbrev rr return
+cabbrev w!! w !sudo tee > /dev/null %<cr>
 "}}}
