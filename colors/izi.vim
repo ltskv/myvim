@@ -3,7 +3,7 @@
 highlight clear
 
 if exists("syntax_on")
-  syntax reset
+syntax reset
 endif
 
 let colors_name = "izi"
@@ -11,7 +11,7 @@ let colors_name = "izi"
 hi Directory    ctermfg=4 ctermbg=15 guifg=#0000ff guibg=#ffffff
 "hi ErrorMsg     guibg=#ee2c2c guifg=White
 "hi FoldColumn   guibg=Grey guifg=#00008B
-hi Folded       cterm=bold ctermfg=8 ctermbg=15 gui=bold guifg=#c0c0c0 guibg=#ffffff
+hi Folded       cterm=bold ctermfg=8 ctermbg=15 gui=bold guifg=#808080 guibg=#ffffff
 hi IncSearch    cterm=reverse gui=reverse
 "hi ModeMsg      gui=bold
 "hi MoreMsg      gui=bold guifg=#2E8B57
@@ -39,6 +39,7 @@ hi Visual       cterm=NONE ctermbg=159 gui=none guibg=#afffff
 hi Error         cterm=bold ctermfg=9 ctermbg=15 gui=bold guifg=#ff0000 guibg=#ffffff
 hi SyntasticError   cterm=bold ctermfg=9 ctermbg=15 gui=bold guifg=#ff0000 guibg=#ffffff
 hi SyntasticWarning cterm=underline gui=undercurl guisp=#ffaf00
+hi OverLength cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guibg=#c0c0c0 guifg=#000000
 hi Identifier    cterm=NONE ctermfg=6 ctermbg=NONE gui=NONE guifg=#00afaf guibg=#ffffff
 "hi Ignore       gui=NONE guifg=bg guibg=NONE
 hi PreProc      cterm=NONE ctermfg=94 ctermbg=15 gui=NONE guifg=#a75f5f guibg=#ffffff

@@ -37,6 +37,7 @@ set laststatus=2
 "{{{
 set guifont=Consolas:h12
 set guicursor=n-v-i-c:block-Cursor
+set guicursor+=n-v-i-c:blinkon0
 set guioptions-=e
 set guioptions-=l
 set guioptions-=L
@@ -64,6 +65,11 @@ let g:tagbar_autofocus = 1
 set completeopt-=preview
 let g:ycm_autoclose_preview_window_after_completion = 1
 set shortmess+=c
+"}}}
+
+"Misc
+"{{{
+match OverLength '\%81v.'
 "}}}
 
 "Mappings
