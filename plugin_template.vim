@@ -1,6 +1,5 @@
 "Vundle stuff
 "{{{
-set nocompatible
 filetype off
 
 "Unix

@@ -1,3 +1,5 @@
+set nocompatible
+
 "Plugin stuff
 "{{{
 if has("win32")
@@ -71,7 +73,7 @@ set shortmess+=c
 "{{{
 augroup overlength
     autocmd!
-    autocmd WinEnter * match OverLength '\%81v.'
+    autocmd BufWinEnter * match OverLength '\%81v.'
 augroup END
 "}}}
 
