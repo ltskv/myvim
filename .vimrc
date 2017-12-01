@@ -17,6 +17,11 @@ filetype plugin indent on
 syntax enable
 syntax sync maxlines=100
 set synmaxcol=200
+
+augroup customft
+    autocmd!
+    autocmd BufNewFile,BufRead *.vim* set filetype=vim
+augroup END
 "}}}
 
 "Options

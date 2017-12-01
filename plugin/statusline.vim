@@ -1,4 +1,7 @@
 function! GetGitStatus()
+    if !exists('*fugitive#statusline')
+        return ''
+    endif
     let result=fugitive#statusline()
     if strlen(result) == 0
         return result
