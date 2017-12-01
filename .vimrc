@@ -3,11 +3,11 @@ set nocompatible
 "Plugin stuff
 "{{{
 if has("win32")
-    source $HOME/vimfiles/plugins.vim
-    source $HOME/vimfiles/locals.vim
+    source $HOME/_vimplugin
+    source $HOME/_vimlocal
 else
-    source $HOME/.vim/plugins.vim
-    source $HOME/.vim/locals.vim
+    source $HOME/.vimplugin
+    source $HOME/.vimlocal
 endif
 "}}}
 
@@ -15,7 +15,7 @@ endif
 "{{{
 filetype plugin indent on
 syntax enable
-syntax sync maxlines=256
+syntax sync maxlines=100
 set synmaxcol=200
 "}}}
 
@@ -69,11 +69,20 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 set shortmess+=c
 "}}}
 
-"Misc
+"Coding style
 "{{{
-augroup overlength
+augroup badstyle
     autocmd!
-    autocmd BufWinEnter * match OverLength '\%81v.'
+    autocmd BufWinEnter * let w:m1 = matchadd('Unstylish', '\%81v.')
+    autocmd BufWinEnter * if &ft != 'make' && &ft != 'gitcommit' |
+                \ let w:m2 = matchadd('Unstylish', '\t') | endif
+augroup END
+
+augroup trailingwhite
+    autocmd!
+    autocmd BufWinEnter,InsertLeave * if &ft != 'markdown'
+                \ | match TrailingWhite '\v\s+$' | endif
+    autocmd InsertEnter * match TrailingWhite ''
 augroup END
 "}}}
 
