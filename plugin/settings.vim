@@ -90,8 +90,15 @@ nnoremap qh :helpclose<cr>
 nnoremap qN :NERDTreeClose<cr>
 nnoremap qT :TagbarClose<cr>
 
-nnoremap <leader>ss :tabe $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
+if has('win32')
+    let my_settings_file = "$HOME/vimfiles/plugin/settings.vim"
+else
+    let my_settings_file = "$HOME/.vim/plugin/settings.vim"
+endif
+
+nnoremap <leader>sl :tabe $MYVIMRC<cr>
+nnoremap <leader>ss :execute 'tabe' my_settings_file<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>:execute 'source' my_settings_file<cr>
 nnoremap <leader>n :noh<cr>
 nnoremap <leader>k <c-w><c-k>
 nnoremap <leader>j <c-w><c-j>
@@ -111,7 +118,6 @@ onoremap qs i'
 "Mappings for Plugins
 "{{{
 nnoremap <leader>N :NERDTree<cr>
-nnoremap <leader>r :AirlineRefresh<cr>
 nnoremap <leader>] :YcmCompleter GoTo<cr>
 nnoremap <leader>ye :YcmShowDetailedDiagnostic<cr>
 nnoremap <leader>yf :YcmCompleter FixIt<cr>:ccl<cr>
