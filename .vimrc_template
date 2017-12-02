@@ -1,0 +1,36 @@
+set nocompatible
+
+"Vundle stuff
+"{{{
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
+Plugin 'vim-scripts/indentpython.vim'
+"Plugin 'vim-airline/vim-airline'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'majutsushi/tagbar'
+"Plugin 'jmcantrell/vim-virtualenv'
+Plugin 'petRUShka/vim-opencl'
+
+call vundle#end()
+"}}}
+
+"Path variables for Plugins
+"{{{
+let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
+let g:ycm_global_ycm_extra_conf = '~/.ycm_global_extra_config.py'
+let g:ycm_python_binary_path = '/usr/local/bin/python'
+let g:syntastic_python_python_exec = '/usr/local/bin/python'
+"}}}
+
+"Local settings
+"{{{
+set guifont=Consolas:h12
+"}}}

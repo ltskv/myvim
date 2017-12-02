@@ -1,16 +1,3 @@
-set nocompatible
-
-"Plugin stuff
-"{{{
-if has("win32")
-    source $HOME/_vimplugin
-    source $HOME/_vimlocal
-else
-    source $HOME/.vimplugin
-    source $HOME/.vimlocal
-endif
-"}}}
-
 "Syntax
 "{{{
 filetype plugin indent on

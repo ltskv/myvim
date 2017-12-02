@@ -11,20 +11,20 @@ function! GetGitStatus()
 endfunction
 
 set statusline=
-set statusline+=%w%q%h
-set statusline+=%{GetGitStatus()}
+set statusline+=%w%q%h "Is it help/preview/loclist?
+set statusline+=%{GetGitStatus()} "Is it git?
 set statusline+=\ 
-set statusline+=%f
-set statusline+=%m%r
-set statusline+=%=
+set statusline+=%f "What's the filename?
+set statusline+=%m%r "Is it modifiable/readonly?
+set statusline+=%= "Go to the right ---->
 set statusline+=\ 
-set statusline+=%<
+set statusline+=%< "Trim here
 set statusline+=%{&fileencoding?&fileencoding:&encoding}
-set statusline+=\|%{&fileformat}
+set statusline+=\|%{&fileformat} "Unix/Win?
 set statusline+=\ 
-set statusline+=%y
+set statusline+=%y "What's the type of the file?
 set statusline+=\ 
-set statusline+=<x%02B>
+set statusline+=<x%02B> "Character under cursor
 set statusline+=\ 
-set statusline+=(%2c:%l)/%L
+set statusline+=(%2c:%l)/%L "(col:line)/total lines
 set statusline+=\ 
