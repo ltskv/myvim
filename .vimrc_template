@@ -4,8 +4,13 @@ set nocompatible
 "{{{
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
+"Unix
+set rtp+=$HOME/.vim/bundle/Vundle.vim
 call vundle#begin()
+
+"Win32
+"set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
+"call vundle#begin($HOME/vimfiles/bundle/)
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tmhedberg/SimpylFold'
@@ -24,10 +29,10 @@ call vundle#end()
 
 "Path variables for Plugins
 "{{{
-let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
-let g:ycm_global_ycm_extra_conf = '~/.ycm_global_extra_config.py'
-let g:ycm_python_binary_path = '/usr/local/bin/python'
-let g:syntastic_python_python_exec = '/usr/local/bin/python'
+"let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
+"let g:ycm_global_ycm_extra_conf = '~/.ycm_global_extra_config.py'
+"let g:ycm_python_binary_path = '/usr/local/bin/python'
+"let g:syntastic_python_python_exec = '/usr/local/bin/python'
 "}}}
 
 "Local settings
