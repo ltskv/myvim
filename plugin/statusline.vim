@@ -21,7 +21,6 @@ set statusline+=\
 set statusline+=%< "Trim here
 set statusline+=%{&fileencoding?&fileencoding:&encoding}
 set statusline+=\|%{&fileformat} "Unix/Win?
-set statusline+=\ 
 set statusline+=%y "What's the type of the file?
 set statusline+=\ 
 set statusline+=<x%02B> "Character under cursor
