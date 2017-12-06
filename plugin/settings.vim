@@ -46,6 +46,7 @@ set langmenu=en_US.UTF-8
 
 "Colors
 "{{{
+set t_Co=256
 colorscheme izi
 ""}}}
 

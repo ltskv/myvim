@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
-repo="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+repo="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd )"
 
-read -p "Would you like to use template from this repository
-as your .vimrc? WARNING: if you do, the existing ~/.vimrc
-will be deleted! [y/n]: " responce
+read -p "
+Would you like to use template from this repository as your .vimrc?
+WARNING: if you do, the existing ~/.vimrc will be deleted!
+[y/n]: " responce
 
 [[ "$responce" = "y" ]] \
     && { [ -f "$HOME/.vimrc" ] && rm "$HOME/.vimrc"; \
@@ -16,20 +17,20 @@ will be deleted! [y/n]: " responce
 
 [ -d "$HOME/.vim/colors" ] \
     && echo "~/.vim/colors already exists, deal with it manually" \
-    || ln -s "$repo/colors" "$HOME/.vim/colors"
+    || ln -vs "$repo/colors" "$HOME/.vim/colors"
 
 [ -d "$HOME/.vim/plugin" ] \
     && echo "~/.vim/plugin already exists, deal with it manually" \
-    || ln -s "$repo/plugin" "$HOME/.vim/plugin"
+    || ln -vs "$repo/plugin" "$HOME/.vim/plugin"
 
 [ -d "$HOME/.vim/ftplugin" ] \
     && echo "~/.vim/ftplugin already exists, deal with it manually" \
-    || ln -s "$repo/ftplugin" "$HOME/.vim/ftplugin"
+    || ln -vs "$repo/ftplugin" "$HOME/.vim/ftplugin"
 
 [ -d "$HOME/.vim/bundle" ] \
     && echo "You seem to already have some plugin manager" \
-    || { mkdir "$HOME/.vim/bundle"; \
-    git clone https://github.com/Vundle/Vundle.vim.git \
-    "$HOME/.vim/bunlde/Vundle.vim"; }
+    || { mkdir -v "$HOME/.vim/bundle"; \
+    git clone -v https://github.com/VundleVim/Vundle.vim.git \
+    "$HOME/.vim/bundle/Vundle.vim"; }
 
 echo "Setup finished."
