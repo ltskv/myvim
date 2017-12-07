@@ -1,4 +1,4 @@
-" izi colorscheme
+" snowhite colorscheme
 
 highlight clear
 
@@ -6,7 +6,7 @@ if exists("syntax_on")
     syntax reset
 endif
 
-let colors_name = "izi"
+let colors_name = "snowhite"
 
 hi Directory    ctermfg=12 ctermbg=15 guifg=#0000ff guibg=#ffffff
 "hi ErrorMsg     guibg=#ee2c2c guifg=White
