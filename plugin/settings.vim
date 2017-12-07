@@ -84,6 +84,7 @@ augroup END
 let mapleader = ","
 let maplocalleader = ","
 nnoremap q <nop>
+nnoremap qn :nohl<cr>
 nnoremap ql :lclose<cr>
 nnoremap qq :cclose<cr>
 nnoremap qp :pclose<cr>
@@ -100,7 +101,6 @@ endif
 nnoremap <leader>sl :tabe $MYVIMRC<cr>
 nnoremap <leader>ss :execute 'tabe' my_settings_file<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>:execute 'source' my_settings_file<cr>
-nnoremap <leader>n :noh<cr>
 nnoremap <leader>k <c-w><c-k>
 nnoremap <leader>j <c-w><c-j>
 nnoremap <leader>h <c-w><c-h>
@@ -129,5 +129,6 @@ nnoremap <leader>T :TagbarToggle<cr>
 "Abbreviations
 "{{{
 iabbrev rr return
+iabbrev itt import
 cabbrev w!! w !sudo tee > /dev/null %<cr>
 "}}}
