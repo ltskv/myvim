@@ -42,7 +42,7 @@ hi SyntasticError   cterm=bold ctermfg=9 ctermbg=0 gui=bold guifg=#ff0000 guibg=
 hi SyntasticWarning cterm=underline gui=undercurl guisp=#ffaf00
 hi Unstylish cterm=NONE ctermbg=52 gui=NONE guibg=#5f0000
 hi def link TrailingWhite Unstylish
-hi Identifier    cterm=NONE ctermfg=14 ctermbg=NONE gui=NONE guifg=#00ffff guibg=#000000
+hi Identifier    cterm=NONE ctermfg=14 ctermbg=NONE gui=NONE guifg=#00c0c0 guibg=#000000
 "hi Ignore       gui=NONE guifg=bg guibg=NONE
 hi PreProc      cterm=NONE ctermfg=3 ctermbg=0 gui=NONE guifg=#c0c000 guibg=#000000
 hi Special      cterm=NONE ctermfg=15 ctermbg=0 gui=NONE guifg=#ffffff guibg=#000000

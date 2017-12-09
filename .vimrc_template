@@ -14,15 +14,12 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tmhedberg/SimpylFold'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-scripts/indentpython.vim'
-"Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'majutsushi/tagbar'
-"Plugin 'jmcantrell/vim-virtualenv'
-Plugin 'petRUShka/vim-opencl'
 
 call vundle#end()
 "}}}
@@ -38,4 +35,5 @@ call vundle#end()
 "Local settings
 "{{{
 set guifont=Consolas:h12
+colorscheme snowhite
 "}}}

@@ -28,7 +28,7 @@ WARNING: if you do, the existing ~/.vimrc will be deleted!
     || ln -vs "$repo/ftplugin" "$HOME/.vim/ftplugin"
 
 [ -d "$HOME/.vim/bundle" ] \
-    && echo "You seem to already have some plugin manager" \
+    && echo "You seem to already have some plugin manager installed" \
     || { mkdir -v "$HOME/.vim/bundle"; \
     git clone -v https://github.com/VundleVim/Vundle.vim.git \
     "$HOME/.vim/bundle/Vundle.vim"; }
