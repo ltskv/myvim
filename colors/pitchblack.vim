@@ -47,7 +47,7 @@ hi Identifier    cterm=NONE ctermfg=14 ctermbg=NONE gui=NONE guifg=#00c0c0 guibg
 hi PreProc      cterm=NONE ctermfg=3 ctermbg=0 gui=NONE guifg=#c0c000 guibg=#000000
 hi Special      cterm=NONE ctermfg=15 ctermbg=0 gui=NONE guifg=#ffffff guibg=#000000
 hi SpecialChar  cterm=NONE ctermfg=1 ctermbg=0 gui=NONE guifg=#c00000 guibg=#000000
-hi String       cterm=NONE ctermfg=9 ctermbg=0 gui=NONE guifg=#ff0000 guibg=#000000
+hi String       cterm=NONE ctermfg=1 ctermbg=0 gui=NONE guifg=#c00000 guibg=#000000
 hi Underlined   cterm=underline ctermfg=12 ctermbg=0 gui=underline guifg=#0000ff guibg=#000000
 
 "hi Boolean      cterm=bold

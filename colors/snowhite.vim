@@ -41,7 +41,7 @@ hi Visual       cterm=NONE ctermbg=159 gui=none guibg=#afffff
 hi Error         cterm=bold ctermfg=9 ctermbg=15 gui=bold guifg=#ff0000 guibg=#ffffff
 hi SyntasticError   cterm=bold ctermfg=9 ctermbg=15 gui=bold guifg=#ff0000 guibg=#ffffff
 hi SyntasticWarning cterm=underline gui=undercurl guisp=#ffaf00
-hi Unstylish cterm=NONE ctermfg=0 ctermbg=217 gui=NONE guibg=#ffc0c0 guifg=#000000
+hi Unstylish cterm=NONE ctermbg=217 gui=NONE guibg=#ffc0c0
 hi def link TrailingWhite Unstylish
 hi Identifier    cterm=NONE ctermfg=6 ctermbg=NONE gui=NONE guifg=#00afaf guibg=#ffffff
 "hi Ignore       gui=NONE guifg=bg guibg=NONE

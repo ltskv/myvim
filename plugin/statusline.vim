@@ -16,6 +16,7 @@ set statusline+=%{GetGitStatus()} "Is it git?
 set statusline+=\ 
 set statusline+=%f "What's the filename?
 set statusline+=%m%r "Is it modifiable/readonly?
+set statusline+=[%LL] "What are total lines?
 set statusline+=%= "Go to the right ---->
 set statusline+=\ 
 set statusline+=%< "Trim here
@@ -23,7 +24,6 @@ set statusline+=%{&fileencoding?&fileencoding:&encoding}
 set statusline+=\|%{&fileformat} "Unix/Win?
 set statusline+=%y "What's the type of the file?
 set statusline+=\ 
-set statusline+=<x%02B> "Character under cursor
-set statusline+=\ 
-set statusline+=(%2c:%l)/%L "(col:line)/total lines
+set statusline+=<x%02B> "Character under cursor...
+set statusline+=@%2c "at column
 set statusline+=\ 
