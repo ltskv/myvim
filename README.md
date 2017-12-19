@@ -29,7 +29,7 @@ color settings:
 
 ```
 0:  #000000 (snowhite)
-0:  #101010 (pitchblack) 
+0:  #101010 (pitchblack)
 1:  #c00000
 2:  #00c000
 3:  #c0c000

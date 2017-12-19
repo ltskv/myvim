@@ -72,8 +72,7 @@ augroup END
 
 augroup trailingwhite
     autocmd!
-    autocmd BufWinEnter,InsertLeave * if &ft != 'markdown'
-                \ | match TrailingWhite '\v\s+$' | endif
+    autocmd BufWinEnter,InsertLeave * match TrailingWhite
     autocmd InsertEnter * match TrailingWhite ''
 augroup END
 "}}}
