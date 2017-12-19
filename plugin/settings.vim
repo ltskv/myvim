@@ -72,7 +72,7 @@ augroup END
 
 augroup trailingwhite
     autocmd!
-    autocmd BufWinEnter,InsertLeave * match TrailingWhite
+    autocmd BufWinEnter,InsertLeave * match TrailingWhite '\v\s+$'
     autocmd InsertEnter * match TrailingWhite ''
 augroup END
 "}}}
