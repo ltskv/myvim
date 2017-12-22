@@ -44,11 +44,6 @@ set guioptions-=T
 set langmenu=en_US.UTF-8
 "}}}
 
-"Colors
-"{{{
-set t_Co=256
-""}}}
-
 "Tagbar stuff
 "{{{
 let g:tagbar_autofocus = 1

@@ -10,11 +10,30 @@ function! GetGitStatus()
     endif
 endfunction
 
+function! GetFilePath()
+    let filename=@%
+    if strlen(filename) == 0
+        return '[new]'
+    elseif strlen(filename) < winwidth(filename) - 40
+        return filename
+    endif
+    let dirpath=split(@%, '\/')
+    let result = ''
+    if expand('%:p') == filename
+        let result .= '/'
+    endif
+    for direntry in dirpath[:-2]
+        let result .= direntry[0] . '/'
+    endfor
+    let result .= expand('%:t')
+    return result
+endfunction
+
 set statusline=
 set statusline+=%w%q%h "Is it help/preview/loclist?
 set statusline+=%{GetGitStatus()} "Is it git?
 set statusline+=\ 
-set statusline+=%.40f "What's the filename?
+set statusline+=%{GetFilePath()} "What's the filename?
 set statusline+=%m%r "Is it modifiable/readonly?
 set statusline+=[%LL] "How many lines?
 set statusline+=%= "Go to the right ---->
