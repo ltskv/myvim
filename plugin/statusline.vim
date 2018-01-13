@@ -17,10 +17,15 @@ function! GetFilePath()
     elseif strlen(filename) < winwidth(filename) - 40
         return filename
     endif
-    let dirpath=split(@%, '\/')
+    if has('win32')
+        let sep = '\'
+    else
+        let sep = '/'
+    endif
+    let dirpath=split(@%, sep)
     let result = ''
-    if expand('%:p') == filename
-        let result .= '/'
+    if filename[0] == sep
+        let result .= sep
     endif
     for direntry in dirpath[:-2]
         let result .= direntry[0] . '/'
@@ -33,12 +38,12 @@ set statusline=
 set statusline+=%w%q%h "Is it help/preview/loclist?
 set statusline+=%{GetGitStatus()} "Is it git?
 set statusline+=\ 
-set statusline+=%{GetFilePath()} "What's the filename?
+set statusline+=%< "Trim here
+set statusline+=%{GetFilePath()} "What's the filename? (nicely adjusted)
 set statusline+=%m%r "Is it modifiable/readonly?
 set statusline+=[%LL] "How many lines?
 set statusline+=%= "Go to the right ---->
 set statusline+=\ 
-set statusline+=%< "Trim here
 set statusline+=%{&fileencoding?&fileencoding:&encoding}
 set statusline+=\|%{&fileformat} "Unix/Win?
 set statusline+=%y "What's the type of the file?
