@@ -38,11 +38,11 @@ set statusline=
 set statusline+=%w%q%h "Is it help/preview/loclist?
 set statusline+=%{GetGitStatus()} "Is it git?
 set statusline+=\ 
-set statusline+=%< "Trim here
 set statusline+=%{GetFilePath()} "What's the filename? (nicely adjusted)
 set statusline+=%m%r "Is it modifiable/readonly?
 set statusline+=[%LL] "How many lines?
 set statusline+=%= "Go to the right ---->
+set statusline+=%< "Trim here
 set statusline+=\ 
 set statusline+=%{&fileencoding?&fileencoding:&encoding}
 set statusline+=\|%{&fileformat} "Unix/Win?

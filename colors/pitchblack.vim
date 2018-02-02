@@ -59,7 +59,7 @@ hi CursorColumn ctermbg=3 guibg=#c0c0c0
 "hi CursorIM     guibg=fg guifg=bg
 hi CursorLine   cterm=bold ctermbg=240 gui=bold guibg=#444444
 hi LineNr       cterm=NONE ctermfg=8 ctermbg=0 gui=NONE guifg=#808080 guibg=#000000
-hi MatchParen   cterm=NONE ctermfg=1 ctermbg=3 gui=NONE guifg=#c00000 guibg=#ffff00
+hi MatchParen   cterm=NONE ctermfg=1 ctermbg=3 gui=NONE guifg=#c00000 guibg=#c0c000
 hi Search       cterm=NONE ctermfg=0 ctermbg=3 gui=NONE guifg=#000000 guibg=#c0c000
 hi Statement    cterm=NONE ctermfg=13 ctermbg=0 gui=NONE guifg=#ff00ff guibg=#000000
 hi Todo         cterm=bold ctermfg=214 ctermbg=0 gui=bold guifg=#ffaf00 guibg=#000000

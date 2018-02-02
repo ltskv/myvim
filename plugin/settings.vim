@@ -60,9 +60,11 @@ set shortmess+=c
 "{{{
 augroup badstyle
     autocmd!
+    autocmd BufWinEnter * call clearmatches()
     autocmd BufWinEnter * let w:m1 = matchadd('Unstylish', '\%81v.')
-    autocmd BufWinEnter * if &ft != 'make' && &ft != 'gitcommit' |
-                \ let w:m2 = matchadd('Unstylish', '\t') | endif
+    autocmd BufWinEnter * if &ft != 'make' && &ft != 'gitcommit'
+                \ && &ft != 'help'
+                \ | let w:m2 = matchadd('Unstylish', '\t') | endif
 augroup END
 
 augroup trailingwhite
@@ -78,6 +80,7 @@ augroup END
 let mapleader = ","
 let maplocalleader = ","
 nnoremap q <nop>
+nnoremap Q <nop>
 nnoremap qn :nohl<cr>
 nnoremap ql :lclose<cr>
 nnoremap qq :cclose<cr>
