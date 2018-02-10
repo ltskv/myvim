@@ -116,7 +116,7 @@ nnoremap <leader>l <c-w><c-l>
 nnoremap <leader>se :syntax enable<cr>
 nnoremap <leader>so :syntax off<cr>
 
-nnoremap <leader>fl mf081F<space>r<cr>`f:delm<cr>
+nnoremap <leader>fl mf081lF<space>r<cr>`f:delm f<cr>
 
 vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>
 vnoremap <c-c> "+y
