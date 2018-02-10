@@ -29,7 +29,9 @@ hi SignColumn   cterm=NONE ctermbg=0 gui=NONE guibg=#000000
 hi TabLine      cterm=NONE ctermbg=8 ctermfg=15 gui=NONE guibg=#808080
 hi TabLineFill  cterm=NONE ctermbg=8 gui=NONE guibg=#808080
 hi TabLineSel   cterm=bold ctermfg=15 ctermbg=0 gui=bold guifg=#ffffff guibg=#000000
-hi StatusLine gui=bold guibg=#585858 guifg=#ffffff cterm=bold ctermbg=240 ctermfg=15
+hi StatusLineNormal gui=bold guibg=#585858 guifg=#ffffff cterm=bold ctermbg=240 ctermfg=15
+hi StatusLineInsert gui=bold guibg=#00c000 guifg=#ffffff cterm=bold ctermbg=2 ctermfg=15
+hi! link StatusLine StatusLineNormal
 hi StatusLineNc gui=NONE guibg=#585858 guifg=#808080 cterm=NONE ctermbg=240 ctermfg=7
 
 hi Title        cterm=bold ctermfg=15 gui=bold guifg=#ffffff

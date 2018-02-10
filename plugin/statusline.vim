@@ -51,3 +51,9 @@ set statusline+=\
 set statusline+=x%02B "Character under cursor...
 set statusline+=\ @%-2c "at column
 set statusline+=\ 
+
+augroup statushl
+    autocmd!
+    autocmd InsertEnter * hi! link StatusLine StatusLineInsert
+    autocmd InsertLeave * hi! link StatusLine StatusLineNormal
+augroup END
