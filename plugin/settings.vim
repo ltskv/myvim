@@ -1,5 +1,5 @@
-"Syntax
-"{{{
+" Syntax
+" {{{
 filetype plugin indent on
 syntax enable
 syntax sync maxlines=100
@@ -9,10 +9,10 @@ augroup customft
     autocmd!
     autocmd BufNewFile,BufRead *.vim* set filetype=vim
 augroup END
-"}}}
+" }}}
 
-"Options
-"{{{
+" Options
+" {{{
 set expandtab
 set shiftwidth=4
 set tabstop=4
@@ -26,38 +26,49 @@ set hlsearch
 set incsearch
 
 set laststatus=2
-"set splitbelow
-"}}}
+" set splitbelow
+" }}}
 
-"Gui stuff
-"{{{
+" Globals
+" {{{
+let g:tex_fold_enabled = 1
+let g:javaScript_fold=1
+" }}}
+
+" Gui stuff
+" {{{
 set guicursor=n-v-i-c:block-Cursor
 set guicursor+=n-v-i-c:blinkon0
-set guioptions-=e
-set guioptions-=l
-set guioptions-=L
-set guioptions-=r
-set guioptions-=R
-set guioptions-=m
-set guioptions-=T
+set guioptions=
 
 set langmenu=en_US.UTF-8
-"}}}
+" }}}
 
-"Tagbar stuff
-"{{{
+" Tagbar stuff
+" {{{
 let g:tagbar_autofocus = 1
-"}}}
+" }}}
+"
+" LatexBox stuff
+" {{{
+let g:LatexBox_no_mappings = 1
+" }}}
 
-"YouCompleteMe stuff
-"{{{
+" YouCompleteMe stuff
+" {{{
 set completeopt-=preview
 let g:ycm_autoclose_preview_window_after_completion = 1
 set shortmess+=c
-"}}}
+" }}}
 
-"Coding style
-"{{{
+" Syntastic Stuff
+" {{{
+let g:syntastic_mode_map = {'mode': 'passive'}
+" let g:syntastic_aggregate_errors = 1
+" }}}
+
+" Coding style
+" {{{
 augroup badstyle
     autocmd!
     autocmd BufWinEnter * call clearmatches()
@@ -73,10 +84,10 @@ augroup trailingwhite
                 \ | match TrailingWhite '\v\s+$' | endif
     autocmd InsertEnter * match TrailingWhite ''
 augroup END
-"}}}
+" }}}
 
-"Mappings
-"{{{
+" Mappings
+" {{{
 let mapleader = ","
 let maplocalleader = ","
 nnoremap q <nop>
@@ -105,27 +116,27 @@ nnoremap <leader>l <c-w><c-l>
 nnoremap <leader>se :syntax enable<cr>
 nnoremap <leader>so :syntax off<cr>
 
+nnoremap <leader>fl mf081F<space>r<cr>`f:delm<cr>
+
 vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>
 vnoremap <c-c> "+y
+" }}}
 
-onoremap p i(
-onoremap qd i"
-onoremap qs i'
-"}}}
-
-"Mappings for Plugins
-"{{{
+" Mappings for Plugins
+" {{{
 nnoremap <leader>N :NERDTree<cr>
 nnoremap <leader>] :YcmCompleter GoTo<cr>
 nnoremap <leader>ye :YcmShowDetailedDiagnostic<cr>
 nnoremap <leader>yf :YcmCompleter FixIt<cr>:ccl<cr>
 nnoremap <leader>yd :YcmDiags<cr>
+nnoremap <leader>sd :SyntasticSetLoclist<cr>:lopen<cr>
+nnoremap <leader>sc :w<cr>:SyntasticCheck<cr>
 nnoremap <leader>T :TagbarToggle<cr>
-"}}}
+" }}}
 
-"Abbreviations
-"{{{
+" Abbreviations
+" {{{
 iabbrev rr return
 iabbrev itt import
 cabbrev w!! w !sudo tee > /dev/null %<cr>
-"}}}
+" }}}
