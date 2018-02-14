@@ -31,7 +31,7 @@ hi TabLine      cterm=NONE ctermbg=7 gui=NONE guibg=#c0c0c0
 hi TabLineFill  cterm=NONE ctermbg=7 gui=NONE guibg=#c0c0c0
 hi TabLineSel   cterm=bold ctermfg=0 ctermbg=15 gui=bold guifg=#000000 guibg=#ffffff
 hi StatusLineNormal gui=bold guibg=#c0c0c0 guifg=#000000 cterm=bold ctermbg=7 ctermfg=0
-hi StatusLineInsert gui=bold guibg=#00ff00 guifg=#000000 cterm=bold ctermbg=10 ctermfg=0
+hi StatusLineInsert gui=bold guibg=#80c080 guifg=#000000 cterm=bold ctermbg=10 ctermfg=0
 hi! link StatusLine StatusLineNormal
 hi StatusLineNc gui=NONE guibg=#c0c0c0 guifg=#808080 cterm=NONE ctermbg=7 ctermfg=8
 hi Title        cterm=bold ctermfg=0 gui=bold guifg=#000000
