@@ -26,13 +26,14 @@ set hlsearch
 set incsearch
 
 set laststatus=2
+set nojoinspaces
 " set splitbelow
 " }}}
 
 " Globals
 " {{{
 let g:tex_fold_enabled = 1
-let g:javaScript_fold=1
+let g:javaScript_fold = 1
 " }}}
 
 " Gui stuff
@@ -40,6 +41,7 @@ let g:javaScript_fold=1
 set guicursor=n-v-i-c:block-Cursor
 set guicursor+=n-v-i-c:blinkon0
 set guioptions=
+set mouse=c
 
 set langmenu=en_US.UTF-8
 " }}}
@@ -52,12 +54,19 @@ let g:tagbar_autofocus = 1
 " LatexBox stuff
 " {{{
 let g:LatexBox_no_mappings = 1
+let g:LatexBox_build_dir = 'build'
+let g:LatexBox_latexmk_options = '-xelatex -outdir=build'
 " }}}
 
 " YouCompleteMe stuff
 " {{{
 set completeopt-=preview
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_filetype_blacklist = {
+            \ 'tex': 1,
+            \ 'markdown': 1,
+            \ 'text': 1
+            \ }
 set shortmess+=c
 " }}}
 
@@ -84,12 +93,18 @@ augroup trailingwhite
                 \ | match TrailingWhite '\v\s+$' | endif
     autocmd InsertEnter * match TrailingWhite ''
 augroup END
+
+augroup prose
+    autocmd!
+    autocmd FileType tex,text,markdown
+                \ setlocal spell spelllang=en_us textwidth=80
+augroup END
 " }}}
 
 " Mappings
 " {{{
 let mapleader = ","
-let maplocalleader = ","
+let maplocalleader = " "
 nnoremap q <nop>
 nnoremap Q <nop>
 nnoremap qn :nohl<cr>
