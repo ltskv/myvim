@@ -50,10 +50,11 @@ set langmenu=en_US.UTF-8
 " {{{
 let g:tagbar_autofocus = 1
 " }}}
-"
+
 " LatexBox stuff
 " {{{
 let g:LatexBox_no_mappings = 1
+let g:LatexBox_quickfix = 2
 let g:LatexBox_build_dir = 'build'
 let g:LatexBox_latexmk_options = '-xelatex -outdir=build'
 " }}}
@@ -121,6 +122,13 @@ else
     let my_settings_file = "$HOME/.vim/plugin/settings.vim"
 endif
 
+nnoremap <leader>c mc:CommenseComment<cr>`c:delm c<cr>
+nnoremap <leader>xc mc:CommenseUncomment<cr>`c:delm c<cr>
+vnoremap <leader>c :CommenseComment<cr>
+vnoremap <leader>xc :CommenseUncomment<cr>
+vnoremap <leader>b :CommenseBlock<cr>
+nnoremap <leader>xb mc:CommenseUnblock<cr>`c:delm c<cr>
+
 nnoremap <leader>sl :tabe $MYVIMRC<cr>
 nnoremap <leader>ss :execute 'tabe' my_settings_file<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>:execute 'source' my_settings_file<cr>
@@ -135,6 +143,8 @@ nnoremap <leader>fl mf081lF<space>r<cr>`f:delm f<cr>
 
 vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>
 vnoremap <c-c> "+y
+nnoremap <c-v> "+p
+inoremap <c-v> <esc>"+p
 " }}}
 
 " Mappings for Plugins
