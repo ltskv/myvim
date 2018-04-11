@@ -1,4 +1,4 @@
-let s:comment_filetype_map = {
+let s:comment_map = {
             \ 'c': '\/\/',
             \ 'cpp': '\/\/',
             \ 'java': '\/\/',
@@ -6,10 +6,11 @@ let s:comment_filetype_map = {
             \ 'python': '#',
             \ 'vim': '"',
             \ 'tex': '%',
+            \ 'plaintex': '%',
             \ 'sh': '#'
             \ }
 
-let s:block_filetype_map = {
+let s:block_map = {
             \ 'c': ['\/\*', '\*\/'],
             \ 'java': ['\/\*', '\*\/'],
             \ 'cpp': ['\/\*', '\*\/'],
@@ -18,21 +19,29 @@ let s:block_filetype_map = {
             \ }
 
 function! MyCommenter(uncomment) range
-    let comment = get(s:comment_filetype_map, &ft, '')
+    let comment = get(s:comment_map, &ft, '')
+    if exists('g:custom_comment_map')
+        let comment = get(g:custom_comment_map, &ft, '')
+    endif
     if !len(comment)
         return
     endif
     let search_range = a:firstline . ',' . a:lastline
+
+    " Uncomment the line (when commenting this avoids multiple comment chars)
+    execute search_range . 's/\(^\s*\)\(' . comment . '\s*\)\+/\1/e'
     if !a:uncomment
+        " Comment
         execute search_range . 's/\(^\s*\)\(\S\)/\1' . comment . ' \2/e'
-    else
-        execute search_range . 's/\(^\s*\)' . comment . '\s*/\1/e'
     endif
     nohl
 endfunction
 
 function! MyBlocker(unblock) range
-    let block = get(s:block_filetype_map, &ft, [])
+    let block = get(s:block_map, &ft, [])
+    if exists('g:custom_block_map')
+        let block = get(g:custom_block_map, &ft, [])
+    endif
     if !len(block)
         return
     endif
@@ -45,10 +54,10 @@ function! MyBlocker(unblock) range
         execute 'normal! ?' . block[0] . "\<cr>" . 'dd'
         execute 'normal! /' . block[1] . "\<cr>" . 'dd'
     endif
-    noh
+    nohl
 endfunction
 
-command! -range CommenseComment <line1>,<line2>call MyCommenter(0)
-command! -range CommenseUncomment <line1>,<line2>call MyCommenter(1)
-command! -range CommenseBlock <line1>,<line2>call MyBlocker(0)
-command! -range CommenseUnblock <line1>,<line2>call MyBlocker(1)
+command! -range CommenseComment silent <line1>,<line2>call MyCommenter(0)
+command! -range CommenseUncomment silent <line1>,<line2>call MyCommenter(1)
+command! -range CommenseBlock silent <line1>,<line2>call MyBlocker(0)
+command! -range CommenseUnblock silent <line1>,<line2>call MyBlocker(1)

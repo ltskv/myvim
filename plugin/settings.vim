@@ -27,6 +27,7 @@ set incsearch
 
 set laststatus=2
 set nojoinspaces
+set backspace=
 " set splitbelow
 " }}}
 
@@ -62,7 +63,7 @@ let g:LatexBox_latexmk_options = '-xelatex -outdir=build'
 " YouCompleteMe stuff
 " {{{
 set completeopt-=preview
-let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_filetype_blacklist = {
             \ 'tex': 1,
             \ 'markdown': 1,
@@ -122,16 +123,17 @@ else
     let my_settings_file = "$HOME/.vim/plugin/settings.vim"
 endif
 
-nnoremap <leader>c mc:CommenseComment<cr>`c:delm c<cr>
-nnoremap <leader>xc mc:CommenseUncomment<cr>`c:delm c<cr>
-vnoremap <leader>c :CommenseComment<cr>
-vnoremap <leader>xc :CommenseUncomment<cr>
-vnoremap <leader>b :CommenseBlock<cr>
-nnoremap <leader>xb mc:CommenseUnblock<cr>`c:delm c<cr>
+nnoremap <silent> <leader>c mc:CommenseComment<cr>`c:delm c<cr>
+nnoremap <silent> <leader>xc mc:CommenseUncomment<cr>`c:delm c<cr>
+vnoremap <silent> <leader>c :CommenseComment<cr>
+vnoremap <silent> <leader>xc :CommenseUncomment<cr>
+vnoremap <silent> <leader>b :CommenseBlock<cr>
+nnoremap <silent> <leader>xb mc:CommenseUnblock<cr>`c:delm c<cr>
 
-nnoremap <leader>sl :tabe $MYVIMRC<cr>
-nnoremap <leader>ss :execute 'tabe' my_settings_file<cr>
+nnoremap <leader>sl :pedit $MYVIMRC<cr>
+nnoremap <leader>ss :execute 'pedit' my_settings_file<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>:execute 'source' my_settings_file<cr>
+nnoremap <leader>st :source %<cr>
 nnoremap <leader>k <c-w><c-k>
 nnoremap <leader>j <c-w><c-j>
 nnoremap <leader>h <c-w><c-h>
