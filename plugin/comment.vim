@@ -21,7 +21,7 @@ let s:block_map = {
 function! MyCommenter(uncomment) range
     let comment = get(s:comment_map, &ft, '')
     if exists('g:custom_comment_map')
-        let comment = get(g:custom_comment_map, &ft, '')
+        let comment = get(g:custom_comment_map, &ft, comment)
     endif
     if !len(comment)
         return

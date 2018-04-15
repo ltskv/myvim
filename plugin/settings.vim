@@ -106,7 +106,9 @@ augroup END
 " Mappings
 " {{{
 let mapleader = ","
+nnoremap , <nop>
 let maplocalleader = " "
+nnoremap <space> <nop>
 nnoremap q <nop>
 nnoremap Q <nop>
 nnoremap qn :nohl<cr>
@@ -143,10 +145,12 @@ nnoremap <leader>so :syntax off<cr>
 
 nnoremap <leader>fl mf081lF<space>r<cr>`f:delm f<cr>
 
+nnoremap <leader>v <c-v>
 vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>
 vnoremap <c-c> "+y
 nnoremap <c-v> "+p
 inoremap <c-v> <esc>"+p
+vnoremap <c-v> x"+P
 " }}}
 
 " Mappings for Plugins
