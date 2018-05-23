@@ -7,7 +7,8 @@ let s:comment_map = {
             \ 'vim': '"',
             \ 'tex': '%',
             \ 'plaintex': '%',
-            \ 'sh': '#'
+            \ 'sh': '#',
+            \ 'make': '#',
             \ }
 
 let s:block_map = {
@@ -28,7 +29,8 @@ function! MyCommenter(uncomment) range
     endif
     let search_range = a:firstline . ',' . a:lastline
 
-    " Uncomment the line (when commenting this avoids multiple comment chars)
+    " Uncomment the line anyway (when commenting this avoids multiple comment
+    " chars)
     execute search_range . 's/\(^\s*\)\(' . comment . '\s*\)\+/\1/e'
     if !a:uncomment
         " Comment

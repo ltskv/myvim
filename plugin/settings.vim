@@ -50,6 +50,7 @@ set langmenu=en_US.UTF-8
 " Tagbar stuff
 " {{{
 let g:tagbar_autofocus = 1
+let g:tagbar_map_close = "qT"
 " }}}
 
 " LatexBox stuff
@@ -57,7 +58,7 @@ let g:tagbar_autofocus = 1
 let g:LatexBox_no_mappings = 1
 let g:LatexBox_quickfix = 2
 let g:LatexBox_build_dir = 'build'
-let g:LatexBox_latexmk_options = '-xelatex -outdir=build'
+let g:LatexBox_latexmk_options = '-xelatex -outdir=build -shell-escape'
 " }}}
 
 " YouCompleteMe stuff
@@ -67,15 +68,19 @@ let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_filetype_blacklist = {
             \ 'tex': 1,
             \ 'markdown': 1,
-            \ 'text': 1
+            \ 'text': 1,
+            \ 'rst': 1,
             \ }
 set shortmess+=c
 " }}}
 
 " Syntastic Stuff
 " {{{
-let g:syntastic_mode_map = {'mode': 'passive'}
-" let g:syntastic_aggregate_errors = 1
+let g:syntastic_mode_map = {
+            \ 'mode': 'passive',
+            \ 'active_filetypes': ['python']
+            \}
+let g:syntastic_python_checkers = ['python', 'pyflakes']
 " }}}
 
 " Coding style
@@ -98,7 +103,7 @@ augroup END
 
 augroup prose
     autocmd!
-    autocmd FileType tex,text,markdown
+    autocmd FileType tex,text,markdown,rst
                 \ setlocal spell spelllang=en_us textwidth=80
 augroup END
 " }}}
@@ -171,4 +176,5 @@ nnoremap <leader>T :TagbarToggle<cr>
 iabbrev rr return
 iabbrev itt import
 cabbrev w!! w !sudo tee > /dev/null %<cr>
+cabbrev ddf %:p:h
 " }}}
