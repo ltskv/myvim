@@ -71,7 +71,9 @@ let g:ycm_filetype_blacklist = {
             \ 'text': 1,
             \ 'rst': 1,
             \ }
-set shortmess+=c
+if has('patch-8.0')
+    set shortmess+=c  " This fixed some bug a while ago
+endif
 " }}}
 
 " Syntastic Stuff

@@ -1,7 +1,7 @@
 " snowhite colorscheme
 
 highlight clear
-
+set t_Co=256
 if exists("syntax_on")
     syntax reset
 endif
@@ -34,6 +34,8 @@ hi StatusLineNormal gui=bold guibg=#c0c0c0 guifg=#000000 cterm=bold ctermbg=7 ct
 hi StatusLineInsert gui=bold guibg=#80c080 guifg=#000000 cterm=bold ctermbg=108 ctermfg=0
 hi! link StatusLine StatusLineNormal
 hi StatusLineNc gui=NONE guibg=#c0c0c0 guifg=#808080 cterm=NONE ctermbg=7 ctermfg=8
+hi StatusLineTerm cterm=bold ctermfg=15 ctermbg=8 gui=bold guifg=#ffffff guibg=#808080
+hi StatusLineTermNc cterm=NONE ctermfg=7 ctermbg=8 gui=NONE guifg=#c0c0c0 guibg=#808080
 hi Title        cterm=bold ctermfg=0 gui=bold guifg=#000000
 hi VertSplit    cterm=bold ctermfg=0 ctermbg=15 gui=bold guifg=#000000 guibg=#ffffff
 hi Visual       cterm=NONE ctermbg=159 gui=none guibg=#afffff

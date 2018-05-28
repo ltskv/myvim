@@ -1,7 +1,7 @@
 " pitchblack colorscheme
 
 highlight clear
-
+set t_Co=256
 if exists("syntax_on")
     syntax reset
 endif
@@ -21,7 +21,7 @@ hi PmenuSel     cterm=NONE ctermfg=15 ctermbg=18 gui=NONE guifg=#ffffff guibg=#0
 "hi PmenuThumb   gui=reverse
 "hi Question     gui=bold guifg=Chartreuse4
 hi SignColumn   cterm=NONE ctermbg=0 gui=NONE guibg=#000000
-"hi SpecialKey   guifg=Blue
+hi SpecialKey   cterm=NONE ctermbg=0 ctermfg=12 gui=NONE guifg=#0000c0 guibg=#000000
 "hi SpellBad     guisp=#ee2c2c gui=undercurl
 "hi SpellCap     guisp=Blue gui=undercurl
 "hi SpellLocal   guisp=#4A708B gui=undercurl
@@ -33,7 +33,8 @@ hi StatusLineNormal gui=bold guibg=#585858 guifg=#ffffff cterm=bold ctermbg=240 
 hi StatusLineInsert gui=bold guibg=#005800 guifg=#ffffff cterm=bold ctermbg=22 ctermfg=15
 hi! link StatusLine StatusLineNormal
 hi StatusLineNc gui=NONE guibg=#585858 guifg=#808080 cterm=NONE ctermbg=240 ctermfg=7
-
+hi StatusLineTerm cterm=bold ctermfg=0 ctermbg=7 gui=bold guifg=#000000 guibg=#c0c0c0
+hi StatusLineTermNc cterm=NONE ctermfg=8 ctermbg=7 gui=NONE guifg=#808080 guibg=#c0c0c0
 hi Title        cterm=bold ctermfg=15 gui=bold guifg=#ffffff
 hi VertSplit    cterm=bold ctermfg=15 ctermbg=0 gui=bold guifg=#ffffff guibg=#000000
 hi Visual       cterm=NONE ctermbg=18 gui=none guibg=#000080
@@ -68,7 +69,7 @@ hi Todo         cterm=bold ctermfg=214 ctermbg=0 gui=bold guifg=#ffaf00 guibg=#0
 hi Type         cterm=NONE ctermfg=111 ctermbg=0 gui=NONE guifg=#87afff guibg=#000000
 "hi WildMenu     guibg=#c7CEEB guifg=Black
 "hi lCursor      guibg=fg guifg=bg
-hi Normal       cterm=NONE ctermfg=15 ctermbg=0 gui=NONE guifg=#eeeeee guibg=#000000
+hi Normal       cterm=NONE ctermfg=254 ctermbg=0 gui=NONE guifg=#eeeeee guibg=#000000
 
 hi DiffAdd    ctermbg=22 guibg=#004400 gui=none cterm=none
 hi DiffChange ctermfg=15 ctermbg=58 guibg=#333300 gui=none cterm=none
