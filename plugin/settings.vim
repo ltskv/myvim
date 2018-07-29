@@ -191,4 +191,5 @@ iabbrev rr return
 iabbrev itt import
 cabbrev w!! w !sudo tee > /dev/null %<cr>
 cabbrev ddf %:p:h
+cabbrev Pydoc term ++close pydoc
 " }}}
