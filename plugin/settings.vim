@@ -53,6 +53,17 @@ let g:tagbar_autofocus = 1
 let g:tagbar_map_close = "qT"
 " }}}
 
+" Webdev stuff
+" {{{
+let g:user_emmet_install_global = 0
+augroup webdev
+    autocmd!
+    autocmd FileType html,css EmmetInstall
+    autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+augroup END
+" }}}
+
 " LatexBox stuff
 " {{{
 let g:LatexBox_no_mappings = 1

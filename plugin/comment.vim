@@ -2,6 +2,7 @@ let s:comment_map = {
             \ 'c': '\/\/',
             \ 'cpp': '\/\/',
             \ 'java': '\/\/',
+            \ 'javascript': '\/\/',
             \ 'vhdl': '--',
             \ 'python': '#',
             \ 'vim': '"',
@@ -16,7 +17,10 @@ let s:block_map = {
             \ 'java': ['\/\*', '\*\/'],
             \ 'cpp': ['\/\*', '\*\/'],
             \ 'python': ['"""', '"""'],
-            \ 'vim': ['" {{{', '" }}}']
+            \ 'vim': ['" {{{', '" }}}'],
+            \ 'css': ['\/\*', '\*\/'],
+            \ 'html': ['<!--', '-->'],
+            \ 'javascript': ['\/\*', '\*\/']
             \ }
 
 function! MyCommenter(uncomment) range
