@@ -90,7 +90,7 @@ let g:syntastic_python_checkers = ['python', 'pyflakes']
 augroup badstyle
     autocmd!
     autocmd BufWinEnter * call clearmatches()
-    autocmd BufWinEnter * let w:m1 = matchadd('Unstylish', '\%81v.')
+    autocmd BufWinEnter * let w:m1 = matchadd('Unstylish', '\%80v.')
     autocmd BufWinEnter * if &ft != 'make' && &ft != 'gitcommit'
                 \ && &ft != 'help'
                 \ | let w:m2 = matchadd('Unstylish', '\t') | endif
@@ -106,7 +106,7 @@ augroup END
 augroup prose
     autocmd!
     autocmd FileType tex,text,markdown,rst
-                \ setlocal spell spelllang=en_us textwidth=80
+                \ setlocal spell spelllang=en_us textwidth=79
 augroup END
 " }}}
 
@@ -165,6 +165,7 @@ vnoremap <c-v> x"+P
 nnoremap <leader>N :NERDTree<cr>
 nnoremap <leader>] :YcmCompleter GoTo<cr>
 nnoremap <leader>ye :YcmShowDetailedDiagnostic<cr>
+nnoremap <leader>yh :YcmCompleter GetDoc<cr>
 nnoremap <leader>yf :YcmCompleter FixIt<cr>:ccl<cr>
 nnoremap <leader>yd :YcmDiags<cr>
 nnoremap <leader>sd :SyntasticSetLoclist<cr>:lopen<cr>
