@@ -127,6 +127,7 @@ let mapleader = ","
 nnoremap , <nop>
 let maplocalleader = " "
 nnoremap <space> <nop>
+
 nnoremap q <nop>
 nnoremap Q <nop>
 nnoremap qn :nohl<cr>
@@ -136,6 +137,9 @@ nnoremap qp :pclose<cr>
 nnoremap qh :helpclose<cr>
 nnoremap qN :NERDTreeClose<cr>
 nnoremap qT :TagbarClose<cr>
+
+nnoremap <silent> gb :bn<cr>
+nnoremap <silent> gB :bp<cr>
 
 if has('win32')
     let my_settings_file = "$HOME/vimfiles/plugin/settings.vim"
@@ -161,7 +165,8 @@ nnoremap <leader>l <c-w><c-l>
 nnoremap <leader>se :syntax enable<cr>
 nnoremap <leader>so :syntax off<cr>
 
-nnoremap <leader>fl mf081lF<space>r<cr>`f:delm f<cr>
+nnoremap <leader>fl mf080lF<space>r<cr>`f:delm f<cr>
+nnoremap <silent> <leader>fw :%s/\s\+$//ge<cr>
 
 nnoremap <leader>v <c-v>
 vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>

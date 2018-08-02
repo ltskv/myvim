@@ -2,8 +2,8 @@
 
 ## Usage
 
-If you find yourself wanting to use these settings, `git clone` this repository,
-and copy or link the following directories:
+If you find yourself wanting to use these settings, `git clone` this
+repository, and copy or link the following directories:
 
 ```
 colors -> ~/.vim/colors
