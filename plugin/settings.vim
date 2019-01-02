@@ -56,12 +56,14 @@ let g:tagbar_map_close = "qT"
 " Webdev stuff
 " {{{
 let g:user_emmet_install_global = 0
+let g:user_emmet_leader_key = '<c-f>'
 augroup webdev
     autocmd!
-    autocmd FileType html,css EmmetInstall
-    autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType html,jinja,css EmmetInstall
+    autocmd FileType html,jinja setlocal omnifunc=htmlcomplete#CompleteTags sw=2 tabstop=2
     autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 augroup END
+runtime macros/matchit.vim
 " }}}
 
 " LatexBox stuff
@@ -69,7 +71,7 @@ augroup END
 let g:LatexBox_no_mappings = 1
 let g:LatexBox_quickfix = 2
 let g:LatexBox_build_dir = 'build'
-let g:LatexBox_latexmk_options = '-xelatex -outdir=build -shell-escape'
+let g:LatexBox_latexmk_options = '-outdir=build -shell-escape'
 " }}}
 
 " YouCompleteMe stuff
@@ -78,12 +80,15 @@ set completeopt-=preview
 let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_filetype_blacklist = {
             \ 'tex': 1,
+            \ 'plaintex': 1,
             \ 'markdown': 1,
             \ 'text': 1,
             \ 'rst': 1,
+            \ 'html': 1,
             \ }
 if has('patch-8.0')
-    set shortmess+=c  " This fixed some bug a while ago
+    " This is supposed to hide User defined completion ^U^X^P
+    set shortmess+=c
 endif
 " }}}
 
@@ -91,9 +96,10 @@ endif
 " {{{
 let g:syntastic_mode_map = {
             \ 'mode': 'passive',
-            \ 'active_filetypes': ['python']
+            \ 'active_filetypes': ['python', 'go']
             \}
 let g:syntastic_python_checkers = ['python', 'pyflakes']
+let g:syntastic_go_checkers = ['go']
 " }}}
 
 " Coding style
@@ -116,8 +122,16 @@ augroup END
 
 augroup prose
     autocmd!
-    autocmd FileType tex,text,markdown,rst
+    autocmd FileType tex,text,plaintex,markdown,rst
                 \ setlocal spell spelllang=en_us textwidth=79
+augroup END
+" }}}
+
+" For Terminal
+" {{{
+augroup terminalsettings
+    autocmd!
+    autocmd TerminalOpen * setlocal nonu
 augroup END
 " }}}
 
@@ -196,5 +210,5 @@ iabbrev rr return
 iabbrev itt import
 cabbrev w!! w !sudo tee > /dev/null %<cr>
 cabbrev ddf %:p:h
-cabbrev Pydoc term ++close pydoc
+cabbrev Pydoc term ++close python -m pydoc
 " }}}

@@ -13,13 +13,16 @@ call vundle#begin()
 "call vundle#begin($HOME/vimfiles/bundle/)
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'tmhedberg/SimpylFold'
 "Plugin 'Valloric/YouCompleteMe'
+Plugin 'tmhedberg/SimpylFold'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-eunuch'
 Plugin 'majutsushi/tagbar'
+" Plugin 'mattn/emmet-vim'
+" Plugin 'lepture/vim-jinja'
 
 call vundle#end()
 "}}}
