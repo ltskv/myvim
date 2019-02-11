@@ -12,6 +12,16 @@ WARNING: if you do, the existing ~/.vimrc will be deleted!
     echo "Created ~/.vimrc from template"; } \
     || echo "Not creating ~/.vimrc from template"
 
+read -p "
+Would you like to also use the .screenrc from this repo?
+WARNING: if you do, the existing ~/.screenrc will be deleted!
+[y/n]: " responce
+
+[[ "$responce" = "y" ]] \
+    && { ln -sf "$repo/.screenrc" "$HOME/.screenrc"; \
+    echo "Created a .screenrc"; } \
+    || echo "Not using .screenrc from this repo."
+
 [ -d "$HOME/.vim" ] || { mkdir "$HOME/.vim"; \
     echo "Created .vim directory in your HOME"; }
 

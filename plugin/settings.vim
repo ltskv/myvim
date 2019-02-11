@@ -5,7 +5,7 @@ syntax enable
 syntax sync maxlines=100
 set synmaxcol=200
 
-augroup customft
+augroup customvimft
     autocmd!
     autocmd BufNewFile,BufRead *.vim* set filetype=vim
 augroup END
@@ -129,10 +129,13 @@ augroup END
 
 " For Terminal
 " {{{
-augroup terminalsettings
-    autocmd!
-    autocmd TerminalOpen * setlocal nonu
-augroup END
+
+if has('terminal')
+    augroup terminalsettings
+        autocmd!
+        autocmd TerminalOpen * setlocal nonu
+    augroup END
+endif
 " }}}
 
 " Mappings

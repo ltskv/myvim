@@ -1,0 +1,5 @@
+term screen-256color
+hardstatus alwayslastline
+hardstatus string '%w'
+startup_message off
+vbell off
