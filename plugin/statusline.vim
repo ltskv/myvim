@@ -52,6 +52,9 @@ set statusline+=x%02B "Character under cursor...
 set statusline+=\ @%-2c "at column
 set statusline+=\ 
 
+hi def link StatusLineNormal StatusLine
+hi def link  StatusLineInsert StatusLineNC
+
 augroup statushl
     autocmd!
     autocmd InsertEnter * hi! link StatusLine StatusLineInsert

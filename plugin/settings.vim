@@ -104,6 +104,10 @@ let g:syntastic_go_checkers = ['go']
 
 " Coding style
 " {{{
+
+hi def link Unstylish ColorColumn
+hi def link TrailingWhite Unstylish
+
 augroup badstyle
     autocmd!
     autocmd BufWinEnter * call clearmatches()
@@ -129,7 +133,6 @@ augroup END
 
 " For Terminal
 " {{{
-
 if has('terminal')
     augroup terminalsettings
         autocmd!
@@ -183,7 +186,7 @@ nnoremap <leader>se :syntax enable<cr>
 nnoremap <leader>so :syntax off<cr>
 
 nnoremap <leader>fl mf080lF<space>r<cr>`f:delm f<cr>
-nnoremap <silent> <leader>fw :%s/\s\+$//ge<cr>
+nnoremap <silent> <leader>fw :%s/\s\+$//ge<cr>:nohl<cr>
 
 nnoremap <leader>v <c-v>
 vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>
