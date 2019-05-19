@@ -59,8 +59,8 @@ let g:user_emmet_install_global = 0
 let g:user_emmet_leader_key = '<c-f>'
 augroup webdev
     autocmd!
-    autocmd FileType html,jinja,css EmmetInstall
-    autocmd FileType html,jinja setlocal omnifunc=htmlcomplete#CompleteTags sw=2 tabstop=2
+    autocmd FileType html,jinja,css,vue EmmetInstall
+    autocmd FileType html,jinja,vue setlocal omnifunc=htmlcomplete#CompleteTags sw=2 tabstop=2
     autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 augroup END
 runtime macros/matchit.vim
