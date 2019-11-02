@@ -75,5 +75,3 @@ hi DiffAdd    ctermbg=156 guibg=#afff87 gui=none cterm=none
 hi DiffChange ctermbg=229 guibg=#ffffaf gui=none cterm=none
 hi DiffText   ctermbg=159 guibg=#afffff gui=none cterm=none
 hi DiffDelete ctermbg=210 ctermfg=124 guibg=#ff8787 guifg=#af0000 gui=none cterm=none
-
-" vim: sw=2

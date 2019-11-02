@@ -4,6 +4,7 @@ let s:comment_map = {
             \ 'go': '\/\/',
             \ 'java': '\/\/',
             \ 'javascript': '\/\/',
+            \ 'rust': '\/\/',
             \ 'vhdl': '--',
             \ 'python': '#',
             \ 'vim': '"',
@@ -11,6 +12,9 @@ let s:comment_map = {
             \ 'plaintex': '%',
             \ 'sh': '#',
             \ 'make': '#',
+            \ 'vuejs': '\/\/',
+            \ 'vue': '\/\/',
+            \ 'cmake': '#'
             \ }
 
 let s:block_map = {

@@ -7,6 +7,8 @@ iabbrev <buffer> sb \subsection
 iabbrev <buffer> ssb \subsubsection
 iabbrev <buffer> td \todo
 iabbrev <buffer> mb \mathbf
+iabbrev <buffer> ie i.e.\@
+iabbrev <buffer> eg e.g.\@
 
 nnoremap <buffer> <localleader>x :Latexmk<cr>
 nnoremap <buffer> <localleader>lv :LatexView<cr>

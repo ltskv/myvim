@@ -9,6 +9,11 @@ augroup customvimft
     autocmd!
     autocmd BufNewFile,BufRead *.vim* set filetype=vim
 augroup END
+
+augroup customvueft
+    autocmd!
+    autocmd BufNewFile,BufRead *.vue set filetype=vue
+augroup END
 " }}}
 
 " Options
@@ -51,6 +56,12 @@ set langmenu=en_US.UTF-8
 " {{{
 let g:tagbar_autofocus = 1
 let g:tagbar_map_close = "qT"
+" }}}
+
+" Python-syntax stuff
+" {{{
+let g:python_highlight_all = 1
+let g:python_highlight_operators = 0
 " }}}
 
 " Webdev stuff
@@ -108,6 +119,10 @@ let g:syntastic_go_checkers = ['go']
 hi def link Unstylish ColorColumn
 hi def link TrailingWhite Unstylish
 
+" Related to Fugitive
+hi! link diffAdded Comment
+hi! link diffRemoved String
+
 augroup badstyle
     autocmd!
     autocmd BufWinEnter * call clearmatches()
@@ -136,7 +151,7 @@ augroup END
 if has('terminal')
     augroup terminalsettings
         autocmd!
-        autocmd TerminalOpen * setlocal nonu
+        autocmd TerminalOpen * setlocal nonu tws="20x0"
     augroup END
 endif
 " }}}
@@ -200,6 +215,7 @@ vnoremap <c-v> x"+P
 " {{{
 nnoremap <leader>N :NERDTree<cr>
 nnoremap <leader>] :YcmCompleter GoTo<cr>
+nnoremap <leader>yt :YcmCompleter GetType<cr>
 nnoremap <leader>ye :YcmShowDetailedDiagnostic<cr>
 nnoremap <leader>yh :YcmCompleter GetDoc<cr>
 nnoremap <leader>yf :YcmCompleter FixIt<cr>:ccl<cr>
