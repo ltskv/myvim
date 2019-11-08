@@ -89,6 +89,7 @@ let g:LatexBox_latexmk_options = '-outdir=build -shell-escape'
 " {{{
 set completeopt-=preview
 let g:ycm_autoclose_preview_window_after_completion = 0
+let g:ycm_key_detailed_diagnostics = ''
 let g:ycm_filetype_blacklist = {
             \ 'tex': 1,
             \ 'plaintex': 1,
@@ -151,7 +152,7 @@ augroup END
 if has('terminal')
     augroup terminalsettings
         autocmd!
-        autocmd TerminalOpen * setlocal nonu tws="20x0"
+        autocmd TerminalOpen * setlocal nonu termwinsize="20x0"
     augroup END
 endif
 " }}}
@@ -193,10 +194,12 @@ nnoremap <leader>sl :pedit $MYVIMRC<cr>
 nnoremap <leader>ss :execute 'pedit' my_settings_file<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>:execute 'source' my_settings_file<cr>
 nnoremap <leader>st :source %<cr>
-nnoremap <leader>k <c-w><c-k>
-nnoremap <leader>j <c-w><c-j>
-nnoremap <leader>h <c-w><c-h>
-nnoremap <leader>l <c-w><c-l>
+" nnoremap <leader>k <c-w><c-k>
+" nnoremap <leader>j <c-w><c-j>
+" nnoremap <leader>h <c-w><c-h>
+" nnoremap <leader>l <c-w><c-l>
+nnoremap <leader>w <c-w>
+nnoremap <leader>dd cc<esc>
 nnoremap <leader>se :syntax enable<cr>
 nnoremap <leader>so :syntax off<cr>
 
