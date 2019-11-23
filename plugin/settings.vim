@@ -152,7 +152,7 @@ augroup END
 if has('terminal')
     augroup terminalsettings
         autocmd!
-        autocmd TerminalOpen * setlocal nonu termwinsize="20x0"
+        autocmd TerminalWinOpen * setlocal nonu
     augroup END
 endif
 " }}}
@@ -166,6 +166,7 @@ nnoremap <space> <nop>
 
 nnoremap q <nop>
 nnoremap Q <nop>
+nnoremap Y y$
 nnoremap qn :nohl<cr>
 nnoremap ql :lclose<cr>
 nnoremap qq :cclose<cr>
@@ -194,11 +195,8 @@ nnoremap <leader>sl :pedit $MYVIMRC<cr>
 nnoremap <leader>ss :execute 'pedit' my_settings_file<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>:execute 'source' my_settings_file<cr>
 nnoremap <leader>st :source %<cr>
-" nnoremap <leader>k <c-w><c-k>
-" nnoremap <leader>j <c-w><c-j>
-" nnoremap <leader>h <c-w><c-h>
-" nnoremap <leader>l <c-w><c-l>
 nnoremap <leader>w <c-w>
+tnoremap <leader>w <c-w>
 nnoremap <leader>dd cc<esc>
 nnoremap <leader>se :syntax enable<cr>
 nnoremap <leader>so :syntax off<cr>
@@ -212,6 +210,9 @@ vnoremap <c-c> "+y
 nnoremap <c-v> "+p
 inoremap <c-v> <esc>"+p
 vnoremap <c-v> x"+P
+
+nnoremap <leader>t :term<cr>
+nnoremap <leader>sw /\<\><Left><Left>
 " }}}
 
 " Mappings for Plugins

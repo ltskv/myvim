@@ -14,7 +14,8 @@ let s:comment_map = {
             \ 'make': '#',
             \ 'vuejs': '\/\/',
             \ 'vue': '\/\/',
-            \ 'cmake': '#'
+            \ 'cmake': '#',
+            \ 'scheme': ';;',
             \ }
 
 let s:block_map = {
