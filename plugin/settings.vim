@@ -145,6 +145,11 @@ augroup prose
     autocmd FileType tex,text,plaintex,markdown,rst
                 \ setlocal spell spelllang=en_us textwidth=79
 augroup END
+
+augroup fuckingcomment
+    autocmd!
+    autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
+augroup END
 " }}}
 
 " For Terminal
@@ -213,6 +218,7 @@ vnoremap <c-v> x"+P
 
 nnoremap <leader>t :term<cr>
 nnoremap <leader>sw /\<\><Left><Left>
+nnoremap <leader>rw :%s/\<\><Left><Left>
 " }}}
 
 " Mappings for Plugins
@@ -228,6 +234,7 @@ nnoremap <leader>sd :SyntasticSetLoclist<cr>:lopen<cr>
 nnoremap <leader>sc :w<cr>:SyntasticCheck<cr>
 nnoremap <leader>sr :SyntasticReset<cr>
 nnoremap <leader>T :TagbarToggle<cr>
+nnoremap <leader>g :Gstatus<cr>
 " }}}
 
 " Abbreviations

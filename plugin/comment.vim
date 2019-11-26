@@ -7,6 +7,7 @@ let s:comment_map = {
             \ 'rust': '\/\/',
             \ 'vhdl': '--',
             \ 'python': '#',
+            \ 'pyrex': '#',
             \ 'vim': '"',
             \ 'tex': '%',
             \ 'plaintex': '%',
