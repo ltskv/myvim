@@ -219,6 +219,9 @@ vnoremap <c-v> x"+P
 nnoremap <leader>t :term<cr>
 nnoremap <leader>sw /\<\><Left><Left>
 nnoremap <leader>rw :%s/\<\><Left><Left>
+vnoremap <leader>rw :s/\<\><Left><Left>
+nnoremap <leader>ln :lnext<cr>
+nnoremap <leader>lp :lprev<cr>
 " }}}
 
 " Mappings for Plugins
@@ -244,4 +247,9 @@ iabbrev itt import
 cabbrev w!! w !sudo tee > /dev/null %<cr>
 cabbrev ddf %:p:h
 cabbrev Pydoc term ++close python -m pydoc
+" }}}
+
+" Commands
+" {{{
+command! -nargs=* Pydebug tab term ++close pudb3 % <args>
 " }}}
