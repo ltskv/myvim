@@ -114,6 +114,12 @@ let g:syntastic_python_checkers = ['python', 'pyflakes']
 let g:syntastic_go_checkers = ['go']
 " }}}
 
+" Doge Stuff
+" {{{
+let g:doge_enable_mappings = 0
+let g:doge_doc_standard_python = 'numpy'
+" }}}
+
 " Coding style
 " {{{
 
@@ -177,11 +183,24 @@ nnoremap ql :lclose<cr>
 nnoremap qq :cclose<cr>
 nnoremap qp :pclose<cr>
 nnoremap qh :helpclose<cr>
-nnoremap qN :NERDTreeClose<cr>
+" nnoremap qN :NERDTreeClose<cr>
 nnoremap qT :TagbarClose<cr>
 
 nnoremap <silent> gb :bn<cr>
 nnoremap <silent> gB :bp<cr>
+
+let opener = ':term ++close ++hidden xo'
+let termexe = $TERMEXE
+
+nnoremap <leader>xod :execute opener '%:p:h'<cr>
+nnoremap <leader>xot :execute opener '-a' termexe '%:p:h'<cr>
+" nnoremap <leader>xow viw"ay:execute opener '<c-r>a'<cr>qaq
+" nnoremap <leader>xol ^vg_"ay:execute opener '<c-r>a'<cr>qaq
+" nnoremap <leader>xo" vi"ayy:execute opener '<c-r>a'<cr>qaq
+" vnoremap <leader>xo "ay:execute opener '<c-r>a'<cr>qaq
+
+nnoremap <silent> <leader>u mwviwu`w:delm w<cr>
+nnoremap <silent> <leader>U mwviwU`w:delm w<cr>
 
 if has('win32')
     let my_settings_file = "$HOME/vimfiles/plugin/settings.vim"
@@ -226,7 +245,7 @@ nnoremap <leader>lp :lprev<cr>
 
 " Mappings for Plugins
 " {{{
-nnoremap <leader>N :NERDTree<cr>
+nnoremap <leader>N :Explore<cr>
 nnoremap <leader>] :YcmCompleter GoTo<cr>
 nnoremap <leader>yt :YcmCompleter GetType<cr>
 nnoremap <leader>ye :YcmShowDetailedDiagnostic<cr>
