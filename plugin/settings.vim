@@ -46,8 +46,8 @@ let g:javaScript_fold = 1
 " {{{
 set guicursor=n-v-i-c:block-Cursor
 set guicursor+=n-v-i-c:blinkon0
-set guioptions=
-set mouse=c
+set guioptions=a
+set mouse=a
 
 set langmenu=en_US.UTF-8
 " }}}
@@ -90,6 +90,7 @@ let g:LatexBox_latexmk_options = '-outdir=build -shell-escape'
 set completeopt-=preview
 let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_key_detailed_diagnostics = ''
+let g:ycm_extra_conf_globlist  = ['!*']
 let g:ycm_filetype_blacklist = {
             \ 'tex': 1,
             \ 'plaintex': 1,
@@ -183,7 +184,7 @@ nnoremap ql :lclose<cr>
 nnoremap qq :cclose<cr>
 nnoremap qp :pclose<cr>
 nnoremap qh :helpclose<cr>
-" nnoremap qN :NERDTreeClose<cr>
+nnoremap qN :NERDTreeClose<cr>
 nnoremap qT :TagbarClose<cr>
 
 nnoremap <silent> gb :bn<cr>
@@ -218,7 +219,6 @@ nnoremap <silent> <leader>xb mc:CommenseUnblock<cr>`c:delm c<cr>
 nnoremap <leader>sl :pedit $MYVIMRC<cr>
 nnoremap <leader>ss :execute 'pedit' my_settings_file<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>:execute 'source' my_settings_file<cr>
-nnoremap <leader>st :source %<cr>
 nnoremap <leader>w <c-w>
 tnoremap <leader>w <c-w>
 nnoremap <leader>dd cc<esc>
@@ -245,7 +245,7 @@ nnoremap <leader>lp :lprev<cr>
 
 " Mappings for Plugins
 " {{{
-nnoremap <leader>N :Explore<cr>
+nnoremap <leader>N :NERDTree<cr>
 nnoremap <leader>] :YcmCompleter GoTo<cr>
 nnoremap <leader>yt :YcmCompleter GetType<cr>
 nnoremap <leader>ye :YcmShowDetailedDiagnostic<cr>
@@ -263,6 +263,7 @@ nnoremap <leader>g :Gstatus<cr>
 " {{{
 iabbrev rr return
 iabbrev itt import
+iabbrev miu µ
 cabbrev w!! w !sudo tee > /dev/null %<cr>
 cabbrev ddf %:p:h
 cabbrev Pydoc term ++close python -m pydoc
