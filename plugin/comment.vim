@@ -18,6 +18,7 @@ let s:comment_map = {
             \ 'cmake': '#',
             \ 'scheme': ';;',
             \ 'yaml': '#'
+            \ 'haskell': '--'
             \ }
 
 let s:block_map = {
