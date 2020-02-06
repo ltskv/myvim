@@ -17,7 +17,7 @@ let s:comment_map = {
             \ 'vue': '\/\/',
             \ 'cmake': '#',
             \ 'scheme': ';;',
-            \ 'yaml': '#'
+            \ 'yaml': '#',
             \ 'haskell': '--'
             \ }
 
