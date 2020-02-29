@@ -7,3 +7,8 @@ iabbrev <buffer> sex raise SystemExit
 iabbrev <buffer> ddf HERE = os.path.abspath(os.path.dirname(__file__))
 
 nnoremap <buffer> <localleader>x :term python %<cr>
+
+nnoremap <buffer> <localleader>ba :PudbAddBreakpoint<cr>
+nnoremap <buffer> <localleader>bd :PudbDeleteBreakpoint<cr>
+nnoremap <buffer> <localleader>bs :PudbShowBreakpoints<cr>
+nnoremap <buffer> <localleader>bh :PudbHideBreakpoints<cr>
