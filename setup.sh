@@ -37,10 +37,16 @@ WARNING: if you do, the existing ~/.screenrc will be deleted!
     && echo "~/.vim/ftplugin already exists, deal with it manually" \
     || ln -vs "$repo/ftplugin" "$HOME/.vim/ftplugin"
 
-[ -d "$HOME/.vim/bundle" ] \
+read -p "
+Would you like to install plugin manager Vundle?
+[y/n]: " responce
+
+[[ "$responce" = "y" ]] \
+    && { [ -d "$HOME/.vim/bundle" ] \
     && echo "You seem to already have some plugin manager installed" \
     || { mkdir -v "$HOME/.vim/bundle"; \
     git clone -v https://github.com/VundleVim/Vundle.vim.git \
-    "$HOME/.vim/bundle/Vundle.vim"; }
+    "$HOME/.vim/bundle/Vundle.vim"; } } \
+    || echo 'Not installing Vundle'
 
 echo "Setup finished."
