@@ -194,7 +194,7 @@ let opener = ':term ++close ++hidden xo'
 let termexe = $TERMEXE
 
 nnoremap <leader>xod :execute opener '%:p:h'<cr>
-nnoremap <leader>xot :execute opener '-a' termexe '%:p:h'<cr>
+nnoremap <leader>xot :term cd %:p:h
 " nnoremap <leader>xow viw"ay:execute opener '<c-r>a'<cr>qaq
 " nnoremap <leader>xol ^vg_"ay:execute opener '<c-r>a'<cr>qaq
 " nnoremap <leader>xo" vi"ayy:execute opener '<c-r>a'<cr>qaq
@@ -267,6 +267,9 @@ iabbrev miu µ
 cabbrev w!! w !sudo tee > /dev/null %<cr>
 cabbrev ddf %:p:h
 cabbrev Pydoc term ++close python -m pydoc
+cabbrev bsp sbuffer
+cabbrev bvs vert sbuffer
+cabbrev tabb tab sbuffer
 " }}}
 
 " Commands

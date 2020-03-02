@@ -5,6 +5,7 @@ iabbrev <buffer> inm if __name__ == '__main__'
 iabbrev <buffer> itf import tensorflow as tf
 iabbrev <buffer> sex raise SystemExit
 iabbrev <buffer> ddf HERE = os.path.abspath(os.path.dirname(__file__))
+iabbrev <buffer> dbg import pudb; pudb.set_trace()
 
 nnoremap <buffer> <localleader>x :term python %<cr>
 
