@@ -9,6 +9,7 @@ iabbrev <buffer> td \todo
 iabbrev <buffer> mb \mathbf
 iabbrev <buffer> ie i.e.\@
 iabbrev <buffer> eg e.g.\@
+iabbrev <buffer> etal \textit{et~al.}\@
 
 nnoremap <buffer> <localleader>x :Latexmk<cr>
 nnoremap <buffer> <localleader>lv :LatexView<cr>
