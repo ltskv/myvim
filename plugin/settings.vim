@@ -33,6 +33,7 @@ set incsearch
 set laststatus=2
 set nojoinspaces
 set backspace=
+set cino=(0,u0,Ws,m1
 " set splitbelow
 " }}}
 
@@ -99,6 +100,7 @@ let g:ycm_filetype_blacklist = {
             \ 'rst': 1,
             \ 'html': 1,
             \ }
+let g:ycm_clangd_args = ['--header-insertion=never']
 if has('patch-8.0')
     " This is supposed to hide User defined completion ^U^X^P
     set shortmess+=c
