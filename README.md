@@ -5,10 +5,10 @@
 * `colors/`: A light and a dark colorscheme.
 * `plugin/settings.vim`: Main configuration file with settings usable on
   all of my computers.
-* `.vimrc_template`: A template used to populate the `~/.vimrc`, that contains
-  settings that are individual for each computer.
+* `.vimrc_template`: A template used to populate the `~/.vimrc`, which contains
+  settings that are local to each different computer.
 * `plugin/statusline.vim`: Configuration of the statusline.
-* `plugin/comment.vim`: A dumb implementation for filetype-based
+* `plugin/comment.vim`: Yet another implementation of filetype-based
   commenting/uncommenting.
 * `plugin/pudb.vim`: **NEW**. Set breakpoints for PuDB from Vim.
 * `setup.sh`: Copies `.vimrc_template` as `~/.vimrc` (asks first), installs
