@@ -99,6 +99,7 @@ let g:ycm_filetype_blacklist = {
             \ 'text': 1,
             \ 'rst': 1,
             \ 'html': 1,
+            \ 'org': 1
             \ }
 let g:ycm_clangd_args = ['--header-insertion=never']
 if has('patch-8.0')
