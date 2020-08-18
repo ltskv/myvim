@@ -247,7 +247,7 @@ nnoremap <leader>lp :lprev<cr>
 
 " Mappings for Plugins
 " {{{
-nnoremap <leader>N :NERDTree<cr>
+nnoremap <leader>N :NERDTree %<cr>
 nnoremap <leader>] :YcmCompleter GoTo<cr>
 nnoremap <leader>yt :YcmCompleter GetType<cr>
 nnoremap <leader>ye :YcmShowDetailedDiagnostic<cr>
