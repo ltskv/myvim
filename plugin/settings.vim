@@ -179,6 +179,8 @@ nnoremap , <nop>
 let maplocalleader = " "
 nnoremap <space> <nop>
 
+inoremap <s-cr> <c-o>O
+
 nnoremap q <nop>
 nnoremap Q <nop>
 nnoremap Y y$
