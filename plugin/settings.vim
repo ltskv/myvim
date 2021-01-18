@@ -41,6 +41,7 @@ set cino=(0,u0,Ws,m1
 " {{{
 let g:tex_fold_enabled = 1
 let g:javaScript_fold = 1
+let g:rust_recommended_style = 0
 " }}}
 
 " Gui stuff
@@ -48,7 +49,6 @@ let g:javaScript_fold = 1
 set guicursor=n-v-i-c:block-Cursor
 set guicursor+=n-v-i-c:blinkon0
 set guioptions=a
-set mouse=a
 
 set langmenu=en_US.UTF-8
 " }}}
