@@ -283,7 +283,7 @@ nnoremap <leader>sd :SyntasticSetLoclist<cr>:lopen<cr>
 nnoremap <leader>sc :w<cr>:SyntasticCheck<cr>
 nnoremap <leader>sr :SyntasticReset<cr>
 nnoremap <leader>T :TagbarToggle<cr>
-nnoremap <leader>g :Gstatus<cr>
+nnoremap <leader>g :Git<cr>
 " }}}
 
 " Abbreviations
