@@ -90,6 +90,7 @@ let g:LatexBox_latexmk_options = '-outdir=build -shell-escape'
 " {{{
 set completeopt-=preview
 let g:ycm_autoclose_preview_window_after_completion = 0
+let g:ycm_auto_hover = ''
 let g:ycm_key_detailed_diagnostics = ''
 let g:ycm_extra_conf_globlist  = ['!*']
 let g:ycm_filetype_blacklist = {
@@ -257,6 +258,7 @@ nnoremap <leader>ye :YcmShowDetailedDiagnostic<cr>
 nnoremap <leader>yh :YcmCompleter GetDoc<cr>
 nnoremap <leader>yf :YcmCompleter FixIt<cr>:ccl<cr>
 nnoremap <leader>yd :YcmDiags<cr>
+nnoremap <leader>yp <plug>(YCMHover)
 nnoremap <leader>sd :SyntasticSetLoclist<cr>:lopen<cr>
 nnoremap <leader>sc :w<cr>:SyntasticCheck<cr>
 nnoremap <leader>sr :SyntasticReset<cr>
