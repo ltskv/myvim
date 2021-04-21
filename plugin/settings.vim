@@ -26,6 +26,7 @@ set encoding=utf-8
 set number
 set showmatch
 set matchtime=2
+set autoread
 
 set hlsearch
 set incsearch
