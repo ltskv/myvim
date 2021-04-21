@@ -175,10 +175,12 @@ augroup END
 " }}}
 
 " Nice hack for project filenames
+" {{{
 augroup relativize
     autocmd!
     autocmd FileReadPost,BufReadPost * cd .
 augroup END
+" }}}
 
 " For Terminal
 " {{{
