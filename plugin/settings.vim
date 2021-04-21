@@ -126,6 +126,16 @@ let g:doge_enable_mappings = 0
 let g:doge_doc_standard_python = 'numpy'
 " }}}
 
+" NNN Stuff
+" {{{
+let g:nnn#set_default_mappings = 0
+let g:nnn#layout = 'new'
+let g:nnn#action = {
+            \ '<leader>nt': 'tab split',
+            \ '<leader>ns': 'split',
+            \ '<leader>nv': 'vsplit' }
+" }}}
+
 " Coding style
 " {{{
 
@@ -252,7 +262,8 @@ nnoremap <leader>lp :lprev<cr>
 
 " Mappings for Plugins
 " {{{
-nnoremap <leader>N :NERDTree %<cr>
+nnoremap <leader>N :NnnPicker %:p:h<CR>
+nnoremap <leader>n :NnnPicker<CR>
 nnoremap <leader>] :YcmCompleter GoTo<cr>
 nnoremap <leader>yt :YcmCompleter GetType<cr>
 nnoremap <leader>ye :YcmShowDetailedDiagnostic<cr>
