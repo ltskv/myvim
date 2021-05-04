@@ -266,6 +266,9 @@ nnoremap <leader>rw :%s/\<\><Left><Left>
 vnoremap <leader>rw :s/\<\><Left><Left>
 nnoremap <leader>ln :lnext<cr>
 nnoremap <leader>lp :lprev<cr>
+nnoremap <leader>qn :cnext<cr>
+nnoremap <leader>qp :cprev<cr>
+nnoremap <leader>rg :Rg <c-r><c-w><cr>
 " }}}
 
 " Mappings for Plugins

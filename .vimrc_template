@@ -29,6 +29,7 @@ Plugin 'jceb/vim-orgmode'
 
 "Stuff useful if backend is available
 Plugin 'mcchrish/nnn.vim'
+Plugin 'jremmen/vim-ripgrep'
 
 "Python
 Plugin 'vim-python/python-syntax'
