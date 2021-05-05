@@ -177,7 +177,9 @@ let g:filetype_trailing_white_ok = [
             \ ]
 
 function! TrailingWhiteUnstylish() abort
-    if index(g:filetype_trailing_white_ok, &ft) == -1
+    if !&modifiable
+        hi! link TrailingWhite Normal
+    elseif index(g:filetype_trailing_white_ok, &ft) == -1
         hi! link TrailingWhite Unstylish
     else
         hi! link TrailingWhite Normal
