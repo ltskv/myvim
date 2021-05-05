@@ -142,11 +142,9 @@ let g:nnn#action = {
             \ '<leader>nv': 'vsplit' }
 " }}}
 
-" Coding style
+" Style - Long Lines and Tabs
 " {{{
-
 hi def link Unstylish ColorColumn
-hi def link TrailingWhite Unstylish
 
 
 function! BadStyle() abort
@@ -164,6 +162,11 @@ augroup badstyle
     autocmd!
     autocmd BufWinEnter * call BadStyle()
 augroup END
+" }}}
+
+" Style - Trailing Whitespace
+" {{{
+hi def link TrailingWhite Unstylish
 
 augroup trailingwhite
     autocmd!
@@ -171,13 +174,19 @@ augroup trailingwhite
                 \ | match TrailingWhite '\v\s+$' | endif
     autocmd InsertEnter * match TrailingWhite ''
 augroup END
+" }}}
 
+" Style - Prose
+" {{{
 augroup prose
     autocmd!
     autocmd FileType tex,text,plaintex,markdown,rst
                 \ setlocal spell spelllang=en_us textwidth=79
 augroup END
+" }}}
 
+" Style - Comment Formatting (?)
+" {{{
 augroup fuckingcomment
     autocmd!
     autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
