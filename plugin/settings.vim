@@ -126,6 +126,12 @@ let g:doge_enable_mappings = 0
 let g:doge_doc_standard_python = 'numpy'
 " }}}
 
+" Fugitive Stuff
+" {{{
+hi! link diffAdded Comment
+hi! link diffRemoved String
+" }}}
+
 " NNN Stuff
 " {{{
 let g:nnn#set_default_mappings = 0
@@ -142,9 +148,6 @@ let g:nnn#action = {
 hi def link Unstylish ColorColumn
 hi def link TrailingWhite Unstylish
 
-" Related to Fugitive
-hi! link diffAdded Comment
-hi! link diffRemoved String
 
 function! BadStyle() abort
     call clearmatches()
