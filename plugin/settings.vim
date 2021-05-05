@@ -146,6 +146,10 @@ let g:nnn#action = {
 " {{{
 hi def link Unstylish ColorColumn
 
+let g:filetype_tab_ok = [
+            \ 'make',
+            \ 'gitcommit'
+            \ ]
 
 function! BadStyle() abort
     call clearmatches()
@@ -153,7 +157,7 @@ function! BadStyle() abort
         return
     endif
     call matchadd('Unstylish', '\%80v.')
-    if &ft != 'make' && &ft != 'gitcommit'
+    if index(g:tab_ok, &ft) == -1
         call matchadd('Unstylish', '\t')
     endif
 endfunction
@@ -168,11 +172,27 @@ augroup END
 " {{{
 hi def link TrailingWhite Unstylish
 
+let g:trailing_white_ok = [
+            \ 'markdown',
+            \ ]
+
+function! TrailingWhiteUnstylish() abort
+    if index(g:trailing_white_ok, &ft) == -1
+        hi! link TrailingWhite Unstylish
+    else
+        hi! link TrailingWhite Normal
+    endif
+endfunction
+
+function! TrailingWhiteNormal() abort
+    hi! link TrailingWhite Normal
+endfunction
+
 augroup trailingwhite
     autocmd!
-    autocmd BufWinEnter,InsertLeave * if &ft != 'markdown'
-                \ | match TrailingWhite '\v\s+$' | endif
-    autocmd InsertEnter * match TrailingWhite ''
+    autocmd BufWinEnter * match TrailingWhite '\v\s+$'
+    autocmd BufWinEnter,InsertLeave * call TrailingWhiteUnstylish()
+    autocmd InsertEnter * call TrailingWhiteNormal()
 augroup END
 " }}}
 
