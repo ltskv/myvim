@@ -157,7 +157,7 @@ function! BadStyle() abort
         return
     endif
     call matchadd('Unstylish', '\%80v.')
-    if index(g:tab_ok, &ft) == -1
+    if index(g:filetype_tab_ok, &ft) == -1
         call matchadd('Unstylish', '\t')
     endif
 endfunction
@@ -172,12 +172,12 @@ augroup END
 " {{{
 hi def link TrailingWhite Unstylish
 
-let g:trailing_white_ok = [
+let g:filetype_trailing_white_ok = [
             \ 'markdown',
             \ ]
 
 function! TrailingWhiteUnstylish() abort
-    if index(g:trailing_white_ok, &ft) == -1
+    if index(g:filetype_trailing_white_ok, &ft) == -1
         hi! link TrailingWhite Unstylish
     else
         hi! link TrailingWhite Normal
