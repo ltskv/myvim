@@ -146,13 +146,20 @@ hi def link TrailingWhite Unstylish
 hi! link diffAdded Comment
 hi! link diffRemoved String
 
+function! BadStyle() abort
+    call clearmatches()
+    if !&modifiable
+        return
+    endif
+    call matchadd('Unstylish', '\%80v.')
+    if &ft != 'make' && &ft != 'gitcommit'
+        call matchadd('Unstylish', '\t')
+    endif
+endfunction
+
 augroup badstyle
     autocmd!
-    autocmd BufWinEnter * call clearmatches()
-    autocmd BufWinEnter * let w:m1 = matchadd('Unstylish', '\%80v.')
-    autocmd BufWinEnter * if &ft != 'make' && &ft != 'gitcommit'
-                \ && &ft != 'help'
-                \ | let w:m2 = matchadd('Unstylish', '\t') | endif
+    autocmd BufWinEnter * call BadStyle()
 augroup END
 
 augroup trailingwhite
