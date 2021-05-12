@@ -309,7 +309,7 @@ nnoremap <leader>ln :lnext<cr>
 nnoremap <leader>lp :lprev<cr>
 nnoremap <leader>qn :cnext<cr>
 nnoremap <leader>qp :cprev<cr>
-nnoremap <leader>rg :Rg <c-r><c-w><cr>
+nnoremap <leader>rg :Rg \\b<c-r><c-w>\\b<cr>
 " }}}
 
 " Mappings for Plugins
