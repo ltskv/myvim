@@ -310,6 +310,9 @@ nnoremap <leader>lp :lprev<cr>
 nnoremap <leader>qn :cnext<cr>
 nnoremap <leader>qp :cprev<cr>
 nnoremap <leader>rg :Rg \\b<c-r><c-w>\\b<cr>
+
+nnoremap <leader>fy :let @"=expand('%')<cr>
+nnoremap <leader>fc :let @+=expand('%')<cr>
 " }}}
 
 " Mappings for Plugins
