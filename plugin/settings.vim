@@ -326,6 +326,7 @@ nnoremap <leader>yh :YcmCompleter GetDoc<cr>
 nnoremap <leader>yf :YcmCompleter FixIt<cr>:ccl<cr>
 nnoremap <leader>yd :YcmDiags<cr>
 nnoremap <leader>yp <plug>(YCMHover)
+nnoremap <leader>yr :YcmCompleter GoToReferences<cr>
 nnoremap <leader>sd :SyntasticSetLoclist<cr>:lopen<cr>
 nnoremap <leader>sc :w<cr>:SyntasticCheck<cr>
 nnoremap <leader>sr :SyntasticReset<cr>
