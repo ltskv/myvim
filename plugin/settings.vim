@@ -164,7 +164,7 @@ endfunction
 
 augroup badstyle
     autocmd!
-    autocmd BufWinEnter * call BadStyle()
+    autocmd BufWinEnter,WinEnter * call BadStyle()
 augroup END
 " }}}
 
@@ -193,7 +193,7 @@ endfunction
 augroup trailingwhite
     autocmd!
     autocmd BufWinEnter * match TrailingWhite '\v\s+$'
-    autocmd BufWinEnter,InsertLeave * call TrailingWhiteUnstylish()
+    autocmd BufWinEnter,WinEnter,InsertLeave * call TrailingWhiteUnstylish()
     autocmd InsertEnter * call TrailingWhiteOkay()
 augroup END
 " }}}
