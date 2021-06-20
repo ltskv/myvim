@@ -229,6 +229,7 @@ if has('terminal')
     augroup terminalsettings
         autocmd!
         autocmd TerminalWinOpen * setlocal nonu
+        autocmd TerminalWinOpen * call TrailingWhiteUnstylish()
     augroup END
 endif
 " }}}
