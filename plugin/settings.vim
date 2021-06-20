@@ -186,7 +186,7 @@ function! TrailingWhiteUnstylish() abort
     endif
 endfunction
 
-function! TrailingWhiteNormal() abort
+function! TrailingWhiteOkay() abort
     hi! link TrailingWhite Normal
 endfunction
 
@@ -194,7 +194,7 @@ augroup trailingwhite
     autocmd!
     autocmd BufWinEnter * match TrailingWhite '\v\s+$'
     autocmd BufWinEnter,InsertLeave * call TrailingWhiteUnstylish()
-    autocmd InsertEnter * call TrailingWhiteNormal()
+    autocmd InsertEnter * call TrailingWhiteOkay()
 augroup END
 " }}}
 
