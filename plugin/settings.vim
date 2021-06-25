@@ -192,7 +192,7 @@ endfunction
 
 augroup trailingwhite
     autocmd!
-    autocmd BufWinEnter * match TrailingWhite '\v\s+$'
+    autocmd BufWinEnter,WinEnter * match TrailingWhite '\v\s+$'
     autocmd BufWinEnter,WinEnter,InsertLeave * call TrailingWhiteUnstylish()
     autocmd InsertEnter * call TrailingWhiteOkay()
 augroup END
