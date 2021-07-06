@@ -17,7 +17,6 @@ call plug#begin('~/.vim/bundle')
 
 "Stuff useful everywhere
 Plug 'scrooloose/syntastic'
-Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-eunuch'
 Plug 'majutsushi/tagbar'
