@@ -6,12 +6,6 @@ Would you like to use template from this repository as your .vimrc?
 WARNING: if you do, the existing ~/.vimrc will be deleted!
 [y/n]: " responce
 
-[[ "$responce" = "y" ]] \
-    && { [ -f "$HOME/.vimrc" ] && rm "$HOME/.vimrc"; \
-    cp "$repo/.vimrc_template" "$HOME/.vimrc"; \
-    echo "Created ~/.vimrc from template"; } \
-    || echo "Not creating ~/.vimrc from template"
-
 read -p "
 Would you like to also use the .screenrc from this repo?
 WARNING: if you do, the existing ~/.screenrc will be deleted!
@@ -37,16 +31,26 @@ WARNING: if you do, the existing ~/.screenrc will be deleted!
     && echo "~/.vim/ftplugin already exists, deal with it manually" \
     || ln -vs "$repo/ftplugin" "$HOME/.vim/ftplugin"
 
+if [ -e "$HOME/.vimrc" ]
+then
+    echo "~/.vimrc already exists, deal with it manually"
+else
+    ln -vs "$repo/.vimrc" "$HOME/.vimrc"
+fi
+
 read -p "
-Would you like to install plugin manager Vundle?
+Would you like to install plugin manager vim-plug?
 [y/n]: " responce
 
-[[ "$responce" = "y" ]] \
-    && { [ -d "$HOME/.vim/bundle" ] \
-    && echo "You seem to already have some plugin manager installed" \
-    || { mkdir -v "$HOME/.vim/bundle"; \
-    git clone -v https://github.com/VundleVim/Vundle.vim.git \
-    "$HOME/.vim/bundle/Vundle.vim"; } } \
-    || echo 'Not installing Vundle'
+if [[ "$responce" = "y" ]]
+then
+    curl \
+        -fLo \
+        ~/.vim/autoload/plug.vim \
+        --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+else
+    echo 'Not installing vim-plug'
+fi
 
 echo "Setup finished."
