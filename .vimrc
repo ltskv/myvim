@@ -5,7 +5,7 @@ set nocompatible
 filetype off
 
 "Unix
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim/bundle')
 
 "Win32
 "set rtp+=$HOME/vimfiles/bundle/Vundle.vim/

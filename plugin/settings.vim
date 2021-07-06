@@ -79,6 +79,14 @@ augroup END
 runtime macros/matchit.vim
 " }}}
 
+" vim-plug stuff
+" {{{
+augroup vim_plug_stuff
+    autocmd!
+    autocmd FileType vim-plug setlocal nocursorline
+augroup END
+" }}}
+
 " LatexBox stuff
 " {{{
 let g:LatexBox_no_mappings = 1
