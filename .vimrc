@@ -1,5 +1,8 @@
 set nocompatible
 
+" They say to do it before plugin loading...
+let g:ale_disable_lsp = 1
+
 "Vundle stuff
 "{{{
 filetype off
@@ -16,7 +19,7 @@ call plug#begin('~/.vim/bundle')
 " Plug 'ajh17/VimCompletesMe'
 
 "Stuff useful everywhere
-Plug 'scrooloose/syntastic'
+Plug 'dense-analysis/ale'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-eunuch'
 Plug 'majutsushi/tagbar'

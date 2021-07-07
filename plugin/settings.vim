@@ -118,7 +118,7 @@ if has('patch-8.0')
 endif
 " }}}
 
-" Syntastic Stuff
+" Syntastic Stuff aka ALE stuff
 " {{{
 let g:syntastic_mode_map = {
             \ 'mode': 'passive',
@@ -126,6 +126,13 @@ let g:syntastic_mode_map = {
             \}
 let g:syntastic_python_checkers = ['python', 'pyflakes']
 let g:syntastic_go_checkers = ['go']
+
+hi! link ALEError SyntasticError
+hi! link ALEWarning SyntasticWarning
+
+let g:ale_linters = {
+            \ 'python': ['pyflakes']
+            \ }
 " }}}
 
 " Doge Stuff
@@ -336,9 +343,11 @@ nnoremap <leader>yf :YcmCompleter FixIt<cr>:ccl<cr>
 nnoremap <leader>yd :YcmDiags<cr>
 nnoremap <leader>yp <plug>(YCMHover)
 nnoremap <leader>yr :YcmCompleter GoToReferences<cr>
-nnoremap <leader>sd :SyntasticSetLoclist<cr>:lopen<cr>
-nnoremap <leader>sc :w<cr>:SyntasticCheck<cr>
-nnoremap <leader>sr :SyntasticReset<cr>
+" nnoremap <leader>sd :SyntasticSetLoclist<cr>:lopen<cr>
+" nnoremap <leader>sc :w<cr>:SyntasticCheck<cr>
+" nnoremap <leader>sr :SyntasticReset<cr>
+nnoremap <leader>sd :ALELint<cr>:lopen<cr>
+nnoremap <leader>sr :ALEReset<cr>
 nnoremap <leader>T :TagbarToggle<cr>
 nnoremap <leader>g :Git<cr>
 " }}}
