@@ -260,6 +260,8 @@ inoremap <s-cr> <c-o>O
 
 nnoremap q <nop>
 nnoremap Q <nop>
+vnoremap q <nop>
+vnoremap Q <nop>
 nnoremap Y y$
 nnoremap qn :nohl<cr>
 nnoremap ql :lclose<cr>
