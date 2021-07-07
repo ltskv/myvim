@@ -234,7 +234,7 @@ augroup END
 " {{{
 augroup relativize
     autocmd!
-    autocmd FileReadPost,BufReadPost,BufNewFile * cd .
+    autocmd FileReadPost,BufReadPost,BufNewFile * lcd .
 augroup END
 " }}}
 
