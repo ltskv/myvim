@@ -1,48 +1,47 @@
 #!/usr/bin/env bash
 repo="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd )"
 
-read -p "
-Would you like to use template from this repository as your .vimrc?
-WARNING: if you do, the existing ~/.vimrc will be deleted!
-[y/n]: " responce
-
-read -p "
+read -r -p "
 Would you like to also use the .screenrc from this repo?
 WARNING: if you do, the existing ~/.screenrc will be deleted!
-[y/n]: " responce
+[y/n]: " response
 
-[[ "$responce" = "y" ]] \
-    && { ln -sf "$repo/.screenrc" "$HOME/.screenrc"; \
-    echo "Created a .screenrc"; } \
-    || echo "Not using .screenrc from this repo."
-
-[ -d "$HOME/.vim" ] || { mkdir "$HOME/.vim"; \
-    echo "Created .vim directory in your HOME"; }
-
-[ -d "$HOME/.vim/colors" ] \
-    && echo "~/.vim/colors already exists, deal with it manually" \
-    || ln -vs "$repo/colors" "$HOME/.vim/colors"
-
-[ -d "$HOME/.vim/plugin" ] \
-    && echo "~/.vim/plugin already exists, deal with it manually" \
-    || ln -vs "$repo/plugin" "$HOME/.vim/plugin"
-
-[ -d "$HOME/.vim/ftplugin" ] \
-    && echo "~/.vim/ftplugin already exists, deal with it manually" \
-    || ln -vs "$repo/ftplugin" "$HOME/.vim/ftplugin"
-
-if [ -e "$HOME/.vimrc" ]
+if [[ "$response" = "y" ]]
 then
-    echo "~/.vimrc already exists, deal with it manually"
+    ln -sf "$repo/.screenrc" "$HOME/.screenrc"
+    echo "Created a .screenrc"
 else
-    ln -vs "$repo/.vimrc" "$HOME/.vimrc"
+    echo "Not using .screenrc from this repo."
 fi
 
-read -p "
-Would you like to install plugin manager vim-plug?
-[y/n]: " responce
+if [ ! -d "$HOME/.vim" ]
+then
+    mkdir "$HOME/.vim"
+    # shellcheck disable=SC2016
+    echo 'Created .vim directory in your $HOME'
+fi
 
-if [[ "$responce" = "y" ]]
+function do_the_symlink() {
+    src="$1"
+    trg="$2"
+    if [ -e "$src" ]
+    then
+        echo "$src already exists, deal with it manually"
+    else
+        ln -vs "$src" "$trg"
+    fi
+}
+
+do_the_symlink "$repo/colors" "$HOME/.vim/colors"
+do_the_symlink "$repo/plugin" "$HOME/.vim/plugin"
+do_the_symlink "$repo/ftplugin" "$HOME/.vim/ftplugin"
+do_the_symlink "$repo/.vimrc" "$HOME/.vimrc"
+
+read -r -p "
+Would you like to install plugin manager vim-plug?
+[y/n]: " response
+
+if [[ "$response" = "y" ]]
 then
     curl \
         -fLo \
