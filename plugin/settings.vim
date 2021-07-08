@@ -35,6 +35,7 @@ set laststatus=2
 set nojoinspaces
 set backspace=
 set cino=(0,u0,Ws,m1
+set belloff=all
 " set splitbelow
 " }}}
 
