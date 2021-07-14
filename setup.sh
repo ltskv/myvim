@@ -24,9 +24,9 @@ fi
 function do_the_symlink() {
     src="$1"
     trg="$2"
-    if [ -e "$src" ]
+    if [ -e "$trg" ]
     then
-        echo "$src already exists, deal with it manually"
+        echo "$trg already exists, deal with it manually"
     else
         ln -vs "$src" "$trg"
     fi
