@@ -348,7 +348,7 @@ iabbrev rr return
 iabbrev itt import
 iabbrev miu µ
 cabbrev w!! w !sudo tee > /dev/null %<cr>
-cabbrev ddf %:p:h
+cabbrev ddf %:h
 cabbrev Pydoc term ++close python -m pydoc
 cabbrev bsp sbuffer
 cabbrev bvs vert sbuffer
