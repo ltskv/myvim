@@ -24,6 +24,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-eunuch'
 Plug 'majutsushi/tagbar'
 Plug 'jceb/vim-orgmode'
+Plug 'easymotion/vim-easymotion'
 
 "Stuff useful if backend is available
 Plug 'mcchrish/nnn.vim'

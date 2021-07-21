@@ -70,4 +70,14 @@ hi! link ALEWarning SyntasticWarning
 
 hi! link diffAdded Comment
 hi! link diffRemoved String
+
+hi CustomDummy NONE
+hi! link EasyMotionShade Dummy
+hi EasyMotionTarget cterm=reverse gui=reverse
+
+hi EasyMotionTarget2First cterm=reverse gui=reverse
+hi EasyMotionTarget2Second cterm=reverse gui=reverse
+
+hi EasyMotionMoveHL cterm=reverse gui=reverse
+hi EasyMotionIncSearch cterm=reverse gui=reverse
 " }}}
