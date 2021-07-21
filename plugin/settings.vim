@@ -128,9 +128,6 @@ let g:syntastic_mode_map = {
 let g:syntastic_python_checkers = ['python', 'pyflakes']
 let g:syntastic_go_checkers = ['go']
 
-hi! link ALEError SyntasticError
-hi! link ALEWarning SyntasticWarning
-
 let g:ale_linters = {
             \ 'python': ['pyflakes']
             \ }
@@ -140,12 +137,6 @@ let g:ale_linters = {
 " {{{
 let g:doge_enable_mappings = 0
 let g:doge_doc_standard_python = 'numpy'
-" }}}
-
-" Fugitive Stuff
-" {{{
-hi! link diffAdded Comment
-hi! link diffRemoved String
 " }}}
 
 " NNN Stuff
@@ -160,8 +151,6 @@ let g:nnn#action = {
 
 " Style - Long Lines and Tabs
 " {{{
-hi def link Unstylish ColorColumn
-
 let g:filetype_tab_ok = [
             \ 'make',
             \ 'gitcommit'
@@ -186,8 +175,6 @@ augroup END
 
 " Style - Trailing Whitespace
 " {{{
-hi def link TrailingWhite Unstylish
-
 let g:filetype_trailing_white_ok = [
             \ 'markdown',
             \ ]

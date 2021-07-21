@@ -52,8 +52,7 @@ set statusline+=%y "What's the type of the file?
 set statusline+=\ @%-2c "at column
 set statusline+=\ 
 
-hi def link StatusLineNormal StatusLine
-hi def link StatusLineInsert StatusLineNC
+hi! link StatusLine StatusLineNormal
 
 augroup statushl
     autocmd!
