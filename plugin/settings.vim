@@ -149,6 +149,11 @@ let g:nnn#action = {
             \ '<leader>nv': 'vsplit' }
 " }}}
 
+" FZF Stuff
+" {{{
+let g:fzf_layout = {'up': '50%'}
+" }}}
+
 " Style - Long Lines and Tabs
 " {{{
 let g:filetype_tab_ok = [
@@ -325,6 +330,7 @@ nnoremap <leader>fc :let @+=expand('%')<cr>
 " {{{
 nnoremap <leader>N :NnnPicker %:p:h<CR>
 nnoremap <leader>n :NnnPicker<CR>
+nnoremap <leader>ff :FZF<CR>
 nnoremap <leader>] :YcmCompleter GoTo<cr>
 nnoremap <leader>yt :YcmCompleter GetType<cr>
 nnoremap <leader>ye :YcmShowDetailedDiagnostic<cr>
