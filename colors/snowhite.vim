@@ -46,7 +46,8 @@ hi Comment      cterm=NONE ctermfg=34 ctermbg=231 gui=NONE guifg=#00af00 guibg=#
 hi Constant     cterm=NONE ctermfg=20 ctermbg=231 gui=NONE guifg=#0000d7 guibg=#ffffff
 hi Cursor       cterm=NONE ctermbg=244 gui=NONE guifg=NONE guibg=#c6c6c6
 hi CursorColumn ctermbg=3 guibg=#c6c6c6
-hi CursorLine   cterm=bold ctermbg=251 gui=bold guibg=#c6c6c6
+hi CursorLine NONE
+hi! link CursorLineNR Normal
 hi LineNr       cterm=NONE ctermfg=251 ctermbg=231 gui=NONE guifg=#c6c6c6 guibg=#ffffff
 hi MatchParen   cterm=NONE ctermfg=196 ctermbg=226 gui=NONE guifg=#ff0000 guibg=#ffff00
 hi Search       cterm=NONE ctermbg=226 gui=NONE guibg=#ffff00

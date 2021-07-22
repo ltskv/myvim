@@ -27,6 +27,7 @@ set number
 set showmatch
 set matchtime=2
 set autoread
+set cursorline
 
 set hlsearch
 set incsearch
