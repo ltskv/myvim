@@ -1,19 +1,6 @@
 #!/usr/bin/env bash
 repo="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd )"
 
-read -r -p "
-Would you like to also use the .screenrc from this repo?
-WARNING: if you do, the existing ~/.screenrc will be deleted!
-[y/n]: " response
-
-if [[ "$response" = "y" ]]
-then
-    ln -sf "$repo/.screenrc" "$HOME/.screenrc"
-    echo "Created a .screenrc"
-else
-    echo "Not using .screenrc from this repo."
-fi
-
 if [ ! -d "$HOME/.vim" ]
 then
     mkdir "$HOME/.vim"
