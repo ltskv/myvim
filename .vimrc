@@ -21,6 +21,7 @@ call plug#begin('~/.vim/bundle')
 "Stuff useful everywhere
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-fugitive'
+Plug 'rbong/vim-flog'
 Plug 'tpope/vim-eunuch'
 Plug 'majutsushi/tagbar'
 Plug 'jceb/vim-orgmode'
