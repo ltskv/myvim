@@ -268,6 +268,8 @@ nnoremap qT :TagbarClose<cr>
 nnoremap <silent> gb :bn<cr>
 nnoremap <silent> gB :bp<cr>
 
+nnoremap gf <c-w><c-f>
+
 let opener = ':term ++close ++hidden xo'
 let termexe = $TERMEXE
 
