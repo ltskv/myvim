@@ -304,8 +304,8 @@ vnoremap <silent> <leader>xc :CommenseUncomment<cr>
 vnoremap <silent> <leader>b :CommenseBlock<cr>
 nnoremap <silent> <leader>xb mc:CommenseUnblock<cr>`c:delm c<cr>
 
-nnoremap <leader>sl :pedit $MYVIMRC<cr>
-nnoremap <leader>ss :execute 'pedit' my_settings_file<cr>
+nnoremap <leader>sl :tabe $MYVIMRC<cr>
+nnoremap <leader>ss :execute 'tabe' my_settings_file<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>:execute 'source' my_settings_file<cr>
 nnoremap <leader>w <c-w>
 tnoremap <leader>w <c-w>
