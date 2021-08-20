@@ -132,6 +132,14 @@ let g:syntastic_go_checkers = ['go']
 let g:ale_linters = {
             \ 'python': ['pyflakes']
             \ }
+let g:ale_fixers = {
+            \ 'python': ['black']
+            \ }
+let g:ale_python_black_options = join([
+            \ '-l',
+            \ '79',
+            \ '--fast'
+            \ ])
 " }}}
 
 " Doge Stuff
