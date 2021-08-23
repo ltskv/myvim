@@ -121,13 +121,6 @@ endif
 
 " Syntastic Stuff aka ALE stuff
 " {{{
-let g:syntastic_mode_map = {
-            \ 'mode': 'passive',
-            \ 'active_filetypes': ['python', 'go']
-            \}
-let g:syntastic_python_checkers = ['python', 'pyflakes']
-let g:syntastic_go_checkers = ['go']
-
 let g:ale_linters = {
             \ 'python': ['pyflakes']
             \ }
