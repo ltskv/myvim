@@ -55,7 +55,7 @@ set guifont=JetBrains\ Mono\ 12
 "When on remote terminal this incites rage
 set mouse=a
 
-if $TERM ==# 'linux'
+if !has('gui_running') && $TERM ==# 'linux'
     colorscheme pitchblack
 else
     colorscheme snowhite
