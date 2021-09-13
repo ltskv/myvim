@@ -41,6 +41,7 @@ Plug 'tmhedberg/SimpylFold'
 " Plug 'LaTeX-Box-Team/LaTeX-Box'
 
 "Weird other langs
+Plug 'google/vim-jsonnet'
 " Plug 'neovimhaskell/haskell-vim'
 " Plug 'cespare/vim-toml'
 " Plug 'rust-lang/rust.vim'
