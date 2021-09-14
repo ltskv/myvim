@@ -28,6 +28,7 @@ Plug 'majutsushi/tagbar'
 Plug 'jceb/vim-orgmode'
 Plug 'easymotion/vim-easymotion'
 Plug 'felipec/vim-sanegx'
+Plug 'junegunn/fzf'
 
 "Stuff useful if backend is available
 Plug 'mcchrish/nnn.vim'
