@@ -127,11 +127,6 @@ let g:ale_linters = {
 let g:ale_fixers = {
             \ 'python': ['black']
             \ }
-let g:ale_python_black_options = join([
-            \ '-l',
-            \ '79',
-            \ '--fast'
-            \ ])
 " }}}
 
 " Doge Stuff
