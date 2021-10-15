@@ -45,7 +45,7 @@ Plug 'tmhedberg/SimpylFold'
 "Weird other langs
 Plug 'google/vim-jsonnet'
 " Plug 'neovimhaskell/haskell-vim'
-" Plug 'cespare/vim-toml'
+Plug 'cespare/vim-toml'
 " Plug 'rust-lang/rust.vim'
 " Plug 'tikhomirov/vim-glsl'
 
