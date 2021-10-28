@@ -32,7 +32,7 @@ Plug 'junegunn/fzf'
 
 "Stuff useful if backend is available
 Plug 'mcchrish/nnn.vim'
-Plug 'jremmen/vim-ripgrep'
+Plug 'lamchau/vim-ripgrep', { 'branch': 'patch-1' }
 
 "Python
 Plug 'vim-python/python-syntax'
