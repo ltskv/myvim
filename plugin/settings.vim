@@ -21,6 +21,7 @@ augroup END
 set expandtab
 set shiftwidth=4
 set tabstop=4
+set foldmethod=syntax
 set foldlevel=99
 set encoding=utf-8
 set number
