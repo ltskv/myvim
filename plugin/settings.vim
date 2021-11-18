@@ -329,7 +329,7 @@ nnoremap <leader>ln :lnext<cr>
 nnoremap <leader>lp :lprev<cr>
 nnoremap <leader>qn :cnext<cr>
 nnoremap <leader>qp :cprev<cr>
-nnoremap <leader>rg :Rg \\b<c-r><c-w>\\b<cr>
+nnoremap <leader>rg :Rg -w <c-r><c-w><cr>
 
 nnoremap <leader>fy :let @"=expand('%')<cr>
 nnoremap <leader>fc :let @+=expand('%')<cr>
