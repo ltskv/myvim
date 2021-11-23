@@ -56,10 +56,10 @@ hi Todo         cterm=bold ctermfg=214 ctermbg=231 gui=bold guifg=#ffaf00 guibg=
 hi Type         cterm=NONE ctermfg=24 ctermbg=231 gui=NONE guifg=#005f87 guibg=#ffffff
 hi Normal       cterm=NONE ctermfg=16 ctermbg=231 gui=NONE guifg=#000000 guibg=#ffffff
 
-hi DiffAdd    ctermbg=156 guibg=#afff87 gui=none cterm=none
-hi DiffChange ctermbg=229 guibg=#ffffaf gui=none cterm=none
-hi DiffText   ctermbg=159 guibg=#afffff gui=none cterm=none
-hi DiffDelete ctermbg=210 ctermfg=124 guibg=#ff8787 guifg=#af0000 gui=none cterm=none
+hi DiffAdd    ctermbg=194 guibg=#d7ffd7 gui=none cterm=none
+hi DiffChange ctermbg=230 guibg=#ffffd7 gui=none cterm=none
+hi DiffText   ctermbg=195 guibg=#d7ffff gui=none cterm=none
+hi DiffDelete ctermbg=224 ctermfg=124 guibg=#ffd7d7 guifg=#af0000 gui=none cterm=none
 
 " Plugin stuff
 " {{{
