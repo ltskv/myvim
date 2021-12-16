@@ -29,6 +29,7 @@ Plug 'jceb/vim-orgmode'
 Plug 'easymotion/vim-easymotion'
 Plug 'felipec/vim-sanegx'
 Plug 'junegunn/fzf'
+Plug 'raimon49/requirements.txt.vim'
 
 "Stuff useful if backend is available
 Plug 'mcchrish/nnn.vim'

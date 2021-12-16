@@ -220,6 +220,10 @@ augroup prose
     autocmd FileType tex,text,plaintex,markdown,rst
                 \ setlocal spell spelllang=en_us textwidth=79
 augroup END
+
+augroup not_prose
+    autocmd!
+    autocmd FileType requirements setlocal nospell
 " }}}
 
 " Style - Comment Formatting (?)
