@@ -358,7 +358,10 @@ nnoremap <leader>yr :YcmCompleter GoToReferences<cr>
 nnoremap <leader>sd :ALELint<cr>:lopen<cr>
 nnoremap <leader>sr :ALEReset<cr>
 nnoremap <leader>T :TagbarToggle<cr>
-nnoremap <leader>g :Git<cr>
+nnoremap <leader>gg :Git<cr>
+nnoremap <leader>gh :vertical Git show HEAD<cr>
+nnoremap <leader>ge :Gedit<cr>
+nnoremap <leader>gb :Git blame<cr>
 " }}}
 
 " Abbreviations
