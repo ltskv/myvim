@@ -327,6 +327,7 @@ inoremap <c-v> <esc>"+p
 vnoremap <c-v> x"+P
 
 nnoremap <leader>t :term<cr>
+nnoremap <leader>T :call term_start(["bash"], {"cwd": expand('%:p:h'), "term_finish": "close"})<cr>
 nnoremap <leader>sw /\<\><Left><Left>
 nnoremap <leader>rw :%s/\<\><Left><Left>
 vnoremap <leader>rw :s/\<\><Left><Left>
@@ -360,7 +361,7 @@ nnoremap <leader>yr :YcmCompleter GoToReferences<cr>
 " nnoremap <leader>sr :SyntasticReset<cr>
 nnoremap <leader>sd :ALELint<cr>:lopen<cr>
 nnoremap <leader>sr :ALEReset<cr>
-nnoremap <leader>T :TagbarToggle<cr>
+nnoremap <leader>B :TagbarToggle<cr>
 nnoremap <leader>gg :Git<cr>
 nnoremap <leader>gh :vertical Git show HEAD<cr>
 nnoremap <leader>ge :Gedit<cr>
