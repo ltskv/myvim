@@ -337,6 +337,8 @@ nnoremap <leader>rg :Rg -w <c-r><c-w><cr>
 
 nnoremap <leader>fy :let @"=expand('%')<cr>
 nnoremap <leader>fc :let @+=expand('%')<cr>
+
+vnoremap <leader>* "sy/\V<C-R>=escape(@s,'/\')<CR><CR>
 " }}}
 
 " Mappings for Plugins
