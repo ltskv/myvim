@@ -224,6 +224,7 @@ augroup END
 augroup not_prose
     autocmd!
     autocmd FileType requirements setlocal nospell
+augroup END
 " }}}
 
 " Style - Comment Formatting (?)
