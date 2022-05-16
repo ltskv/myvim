@@ -275,6 +275,7 @@ nnoremap qp :pclose<cr>
 nnoremap qh :helpclose<cr>
 nnoremap qN :NERDTreeClose<cr>
 nnoremap qT :TagbarClose<cr>
+nnoremap * :keepjumps normal! mi*`i<CR>
 
 nnoremap <silent> gb :bn<cr>
 nnoremap <silent> gB :bp<cr>
