@@ -81,4 +81,7 @@ hi EasyMotionTarget2Second cterm=reverse gui=reverse
 
 hi EasyMotionMoveHL cterm=reverse gui=reverse
 hi EasyMotionIncSearch cterm=reverse gui=reverse
+
+hi! ALEVirtualTextError cterm=bold ctermfg=251 gui=bold guifg=#c6c6c6
+hi! ALEVirtualTextWarning cterm=NONE ctermfg=251 gui=bold guifg=#c6c6c6
 " }}}
