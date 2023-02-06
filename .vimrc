@@ -57,7 +57,7 @@ call plug#end()
 "{{{
 set guifont=JetBrains\ Mono\ 12
 "When on remote terminal this incites rage
-set mouse=a
+set mouse=
 
 if !has('gui_running') && $TERM ==# 'linux'
     colorscheme pitchblack
