@@ -158,7 +158,8 @@ let g:nnn#action = {
 
 " FZF Stuff
 " {{{
-let g:fzf_layout = {'up': '50%'}
+let g:fzf_layout = {'up': '20%'}
+let g:fzf_command_prefix = 'Fzf'
 " }}}
 
 " Style - Long Lines and Tabs
@@ -280,6 +281,11 @@ nnoremap * :keepjumps normal! mi*`i<CR>
 nnoremap <silent> gb :bn<cr>
 nnoremap <silent> gB :bp<cr>
 
+nnoremap <silent> <leader>kj :call KillNeighbor('j')<cr>
+nnoremap <silent> <leader>kh :call KillNeighbor('h')<cr>
+nnoremap <silent> <leader>kk :call KillNeighbor('k')<cr>
+nnoremap <silent> <leader>kl :call KillNeighbor('l')<cr>
+
 nnoremap gf <c-w><c-f>
 
 let opener = ':term ++close ++hidden xo'
@@ -348,7 +354,9 @@ vnoremap <leader>* "sy/\V<C-R>=escape(@s,'/\')<CR><CR>
 " {{{
 nnoremap <leader>N :NnnPicker %:p:h<CR>
 nnoremap <leader>n :NnnPicker<CR>
-nnoremap <leader>ff :FZF<CR>
+nnoremap <leader>fff :FzfFiles<CR>
+nnoremap <leader>ffb :FzfBuffers<CR>
+nnoremap <leader>ffr :FzfRg<CR>
 nnoremap <leader>] :YcmCompleter GoTo<cr>
 nnoremap <leader>yt :YcmCompleter GetType<cr>
 nnoremap <leader>ye :YcmShowDetailedDiagnostic<cr>
