@@ -257,6 +257,13 @@ endif
 
 " Mappings
 " {{{
+function! KillNeighbor(motion)
+    let l:curwin = win_getid()
+    execute "normal! \<c-w>" .. a:motion
+    q
+    call win_gotoid(l:curwin)
+endfunction
+
 let mapleader = ","
 nnoremap , <nop>
 let maplocalleader = " "
@@ -322,6 +329,7 @@ tnoremap <leader>w <c-w>
 nnoremap <leader>dd cc<esc>
 nnoremap <leader>se :syntax enable<cr>
 nnoremap <leader>so :syntax off<cr>
+nnoremap <leader>o :only<cr>
 
 nnoremap <leader>fl mf080lF<space>r<cr>`f:delm f<cr>
 nnoremap <silent> <leader>fw :%s/\s\+$//ge<cr>:nohl<cr>
