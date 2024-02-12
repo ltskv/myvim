@@ -294,7 +294,8 @@ nnoremap <silent> <leader>kh :call KillNeighbor('h')<cr>
 nnoremap <silent> <leader>kk :call KillNeighbor('k')<cr>
 nnoremap <silent> <leader>kl :call KillNeighbor('l')<cr>
 
-nnoremap gf <c-w><c-f>
+nnoremap gf <c-w>f
+vnoremap gf <c-w>f
 
 let opener = ':term ++close ++hidden xo'
 let termexe = $TERMEXE
