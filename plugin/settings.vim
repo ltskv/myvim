@@ -161,6 +161,18 @@ let g:nnn#action = {
 " {{{
 let g:fzf_layout = {'up': '20%'}
 let g:fzf_command_prefix = 'Fzf'
+
+" Not sure why this is not bundled by default
+function! s:build_quickfix_list(lines)
+    call setqflist(map(copy(a:lines), '{ "filename": v:val, "lnum": 1 }'))
+    copen
+    cc
+endfunction
+let g:fzf_action = {
+            \ 'ctrl-q': function('s:build_quickfix_list'),
+            \ 'ctrl-t': 'tab split',
+            \ 'ctrl-x': 'split',
+            \ 'ctrl-v': 'vsplit' }
 " }}}
 
 " Style - Long Lines and Tabs
