@@ -29,6 +29,7 @@ set showmatch
 set matchtime=2
 set autoread
 set cursorline
+set wildmode=longest,full
 
 set hlsearch
 set incsearch
