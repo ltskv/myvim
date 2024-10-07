@@ -398,6 +398,7 @@ nnoremap <leader>gg :Git<cr>
 nnoremap <leader>gh :vertical Git show HEAD<cr>
 nnoremap <leader>ge :Gedit<cr>
 nnoremap <leader>gb :Git blame<cr>
+nnoremap <leader>gdh :Gvdiffsplit HEAD~<cr>
 " }}}
 
 " Abbreviations
