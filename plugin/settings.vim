@@ -358,7 +358,8 @@ vnoremap <c-v> x"+P
 nnoremap <leader>t :term<cr>
 nnoremap <leader>T :call term_start(["bash"], {"cwd": expand('%:p:h'), "term_finish": "close"})<cr>
 nnoremap <leader>sw /\<\><Left><Left>
-nnoremap <leader>rw :%s/\<\><Left><Left>
+nnoremap <leader>rw "ayiw:%s/\<<c-r>a\>/
+nnoremap <leader>rp "ayiw:SearchAndReplace <c-r>a
 vnoremap <leader>rw :s/\<\><Left><Left>
 nnoremap <leader>ln :lnext<cr>
 nnoremap <leader>lp :lprev<cr>
