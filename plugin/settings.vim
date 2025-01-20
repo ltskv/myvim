@@ -124,13 +124,13 @@ endif
 " Syntastic Stuff aka ALE stuff
 " {{{
 let g:ale_linters = {
-            \ 'python': ['pyflakes'],
+            \ 'python': ['ruff'],
             \ 'cpp': [],
             \ 'rust': []
             \ }
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
-            \ 'python': ['black'],
+            \ 'python': ['black', 'ruff'],
             \ 'javascript': ['prettier'],
             \ 'vue': ['prettier'],
             \ 'html': ['prettier'],
@@ -138,6 +138,10 @@ let g:ale_fixers = {
             \ 'json': ['prettier'],
             \ 'rust': ['rustfmt'],
             \ '*': []
+            \ }
+let g:ale_python_black_options='--fast'
+let g:ale_pattern_options = {
+            \ 'fugitive\:': {'ale_enabled': 0}
             \ }
 " }}}
 
