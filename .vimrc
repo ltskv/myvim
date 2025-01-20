@@ -31,6 +31,7 @@ Plug 'felipec/vim-sanegx'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'raimon49/requirements.txt.vim'
+" Plug 'github/copilot.vim'
 
 "Stuff useful if backend is available
 Plug 'mcchrish/nnn.vim'
@@ -53,6 +54,10 @@ Plug 'cespare/vim-toml'
 
 call plug#end()
 "}}}
+
+" Enable if need to use copilot
+" Otherwise YCM shadows copilot
+" let g:ycm_min_num_of_chars_for_completion=99
 
 "Local settings
 "{{{
