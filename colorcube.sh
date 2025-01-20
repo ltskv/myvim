@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 for i in {0..1}
 do
     for k in {0..7}
