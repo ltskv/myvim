@@ -14,6 +14,11 @@ augroup customvueft
     autocmd!
     autocmd BufNewFile,BufRead *.vue set filetype=vue
 augroup END
+
+augroup customuvlockft
+    autocmd!
+    autocmd BufNewFile,BufRead uv.lock set filetype=toml
+augroup END
 " }}}
 
 " Options
