@@ -103,6 +103,35 @@ let g:LatexBox_build_dir = 'build'
 let g:LatexBox_latexmk_options = '-outdir=build -shell-escape'
 " }}}
 
+" LSP stuff
+" {{{
+augroup LspSetup
+    autocmd!
+    autocmd User LspSetup call LspOptionsSet(#{
+                \ aleSupport: v:true,
+                \ hoverInPreview: v:true,
+                \ semanticHighlight: v:true,
+                \ ignoreMissingServer: v:true,
+                \ })
+    autocmd User LspSetup call LspAddServer([
+                \ #{
+                \ name: 'ty',
+                \ filetype: ['python'],
+                \ path: 'ty',
+                \ args: ['server'],
+                \ },
+                \
+                \ #{
+                \ name: 'rust-analyzer',
+                \ filetype: ['rust'],
+                \ path: 'rust-analyzer',
+                \ args: [],
+                \ },
+                \
+                \ ])
+augroup END
+" }}}
+
 " YouCompleteMe stuff
 " {{{
 set completeopt-=preview
@@ -389,14 +418,12 @@ nnoremap <leader>n :NnnPicker<CR>
 nnoremap <leader>fff :FzfFiles<CR>
 nnoremap <leader>ffb :FzfBuffers<CR>
 nnoremap <leader>ffr :FzfRg<CR>
-nnoremap <leader>] :YcmCompleter GoTo<cr>
-nnoremap <leader>yt :YcmCompleter GetType<cr>
-nnoremap <leader>ye :YcmShowDetailedDiagnostic<cr>
-nnoremap <leader>yh :YcmCompleter GetDoc<cr>
+nnoremap <leader>] :LspGotoDefinition<cr>
+nnoremap <leader>yt :LspShowSignature<cr>
+nnoremap <leader>yh :LspHover<cr>
+nnoremap <leader>yd :LspDiag show<cr>
+nnoremap <leader>yr :LspIncomingCalls<cr>
 nnoremap <leader>yf :YcmCompleter FixIt<cr>:ccl<cr>
-nnoremap <leader>yd :YcmDiags<cr>
-nnoremap <leader>yp <plug>(YCMHover)
-nnoremap <leader>yr :YcmCompleter GoToReferences<cr>
 " nnoremap <leader>sd :SyntasticSetLoclist<cr>:lopen<cr>
 " nnoremap <leader>sc :w<cr>:SyntasticCheck<cr>
 " nnoremap <leader>sr :SyntasticReset<cr>

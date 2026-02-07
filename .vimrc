@@ -17,6 +17,7 @@ call plug#begin('~/.vim/bundle')
 "Autocomplete (choose one)
 " Plug 'Valloric/YouCompleteMe'
 " Plug 'ajh17/VimCompletesMe'
+" Plug 'yegappan/lsp'
 
 "Stuff useful everywhere
 Plug 'dense-analysis/ale'
