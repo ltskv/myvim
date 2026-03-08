@@ -160,18 +160,18 @@ endif
 let g:ale_linters = {
             \ 'python': ['ruff'],
             \ 'cpp': [],
-            \ 'rust': []
+            \ 'rust': [],
             \ }
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
-            \ 'python': ['black', 'ruff'],
+            \ 'python': ['ruff_format', 'ruff'],
             \ 'javascript': ['prettier'],
             \ 'vue': ['prettier'],
             \ 'html': ['prettier'],
             \ 'markdown': ['prettier'],
             \ 'json': ['prettier'],
             \ 'rust': ['rustfmt'],
-            \ '*': []
+            \ '*': [],
             \ }
 let g:ale_python_black_options='--fast'
 let g:ale_pattern_options = {
