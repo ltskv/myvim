@@ -112,6 +112,8 @@ augroup LspSetup
                 \ hoverInPreview: v:true,
                 \ semanticHighlight: v:true,
                 \ ignoreMissingServer: v:true,
+                \ autoComplete: v:false,
+                \ omniComplete: v:true,
                 \ })
     autocmd User LspSetup call LspAddServer([
                 \ #{
@@ -177,6 +179,21 @@ let g:ale_python_black_options='--fast'
 let g:ale_pattern_options = {
             \ 'fugitive\:': {'ale_enabled': 0}
             \ }
+" }}}
+
+" Autocomplete stuff
+" {{{
+if has('patch-9.2.0000')
+    set autocomplete
+    set complete=o,.,w
+    set completeopt+=menuone
+    set completeopt+=noselect
+    set completeopt+=noinsert
+    set completeopt+=fuzzy
+    set completeopt+=nosort
+    inoremap <silent><expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+    inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+endif
 " }}}
 
 " Doge Stuff
